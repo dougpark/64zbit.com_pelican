@@ -1,12 +1,18 @@
       
 
-**Pelican Obsidian**
+# Pelican Obsidian
 December 26, 2021
 
-**To Do**
+## To Do
 -   Convert image links
 -   Convert internal links
--   Template for new article
--   Template for new page
--   Auto rebuild
--   Auto upload to Zelda
+x   Template for new article
+x   Template for new page
+x   Auto rebuild
+x   Auto upload to Zelda
+
+
+Obisidin Short Cuts
+- Caps-P 			Publish to prod server
+- Caps-T			Select a template
+- 

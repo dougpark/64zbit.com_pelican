@@ -9,4 +9,4 @@ We all work together. I always try to assume the other person is asking a seriou
 
 How to answer questions in a helpful way
 
-[Answer Questions Well](https://jvns.ca/blog/answer-questions-well/)
+[Answer Questions Well by Julia Evans](https://jvns.ca/blog/answer-questions-well/)

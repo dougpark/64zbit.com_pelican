@@ -69,7 +69,7 @@ If all goes well you should see a `time=` value at the end of each line. This te
 
 When the connection goes down you will receive error messages. These will be helpful in determining what went wrong.
 
-![](https://64zbit.com/content/images/2021/03/Screenshot_2021-03-08-21.51.21_ya0Tr6.png)
+![](https://ghost.64zbit.com/content/images/2021/03/Screenshot_2021-03-08-21.51.21_ya0Tr6.png)
 
 Example showing a request timout error
 
@@ -85,7 +85,7 @@ The `-v` option tells grep to "invert match", so any line that does not contain 
 
 This command will search the network.log for any line that does not contain the string "time". So for any ping command that returns anything other than a normal ping time will be displayed. This includes any error messages that you should look at.
 
-![Example showing an unreachable server](https://64zbit.com/content/images/2021/03/Screenshot_2021-03-09-11.44.55_rGKrOj.png "Example showing an unreachable server")  
+![Example showing an unreachable server](https://ghost.64zbit.com/content/images/2021/03/Screenshot_2021-03-09-11.44.55_rGKrOj.png "Example showing an unreachable server")  
 Example showing an unreachable server
 
 ### Find your running ping command
@@ -96,7 +96,7 @@ Use the `pgrep` command to find running ping jobs and return the process id (PID
 pgrep ping 
 ```
 
-![Example showing pgrep ping output](https://64zbit.com/content/images/2021/03/Screenshot_2021-03-09-11.57.09_k4jkp7.png "Example showing pgrep ping output")
+![Example showing pgrep ping output](https://ghost.64zbit.com/content/images/2021/03/Screenshot_2021-03-09-11.57.09_k4jkp7.png "Example showing pgrep ping output")
 
 `pgrep` returns the process id (PID) where the string matches. In this case the PID = 24895. Warning: Don't use this PID, use the PID you find on your own system.
 
@@ -114,7 +114,7 @@ Here's nother command to find the running ping processes. Use `ps` if your distr
 ps -aux | grep ping 
 ```
 
-![Example showing ps -aux output](https://64zbit.com/content/images/2021/03/Screenshot_2021-03-09-12.01.43_GMlonb.png "Example showing ps -aux output")
+![Example showing ps -aux output](https://ghost.64zbit.com/content/images/2021/03/Screenshot_2021-03-09-12.01.43_GMlonb.png "Example showing ps -aux output")
 
 The process id on this distribution is in the second column from the left. In this case the PID = 24895.
 

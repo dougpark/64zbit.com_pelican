@@ -11,7 +11,7 @@ Html5, [Phaser 2,](http://phaser.io/) Action packed arcade game
 
 Pluto Attacks was previously hosted at [povingames.com](https://povingames.com/)
 
-![](https://64zbit.com/content/images/2020/10/Screenshot_2020-10-25-19.16.34_B29XIC.png)
+![](https://ghost.64zbit.com/content/images/2020/10/Screenshot_2020-10-25-19.16.34_B29XIC.png)
 
 [Play Now](https://play.64zbit.com/plutoattacks)
 
@@ -39,4 +39,4 @@ Levels go by pretty quickly. Hey, it’s a game with only two buttons and you ca
 
 Tip: Don’t let any aliens escape!
 
-![Pluto Attacks](https://64zbit.com/content/images/size/w2000/2020/10/pluto-attacks1.png)
+![Pluto Attacks](https://ghost.64zbit.com/content/images/size/w2000/2020/10/pluto-attacks1.png)

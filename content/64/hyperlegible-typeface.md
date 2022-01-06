@@ -11,7 +11,7 @@ I love this and will need it sooner than I expect.
 
 [https://www.brailleinstitute.org/freefont](https://www.brailleinstitute.org/freefont)
 
-![](https://64zbit.com/content/images/2020/10/image-4.png)
+![](https://ghost.64zbit.com/content/images/2020/10/image-4.png)
 
 
 A Free Hyperlegible Typeface from the Braille Institute

@@ -1,5 +1,5 @@
 PY?=python3
-PELICAN?=pelican
+PELICAN?=/opt/homebrew/bin/pelican
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
@@ -16,7 +16,7 @@ FTP_TARGET_DIR=/website
 SSH_HOST=45.33.116.242
 SSH_PORT=22
 SSH_USER=pi
-SSH_TARGET_DIR=~/dev_volumes/public_html/apache
+SSH_TARGET_DIR=~/prod_volumes/public_html/apache
 
 
 DEBUG ?= 0
@@ -84,6 +84,10 @@ publish:
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r "$(OUTPUTDIR)"/* "$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)"
+
+prod: publish
+	scp -P $(SSH_PORT) -r "$(OUTPUTDIR)"/* "$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)"
+
 
 sftp_upload: publish
 	printf 'put -r $(OUTPUTDIR)/*' | sftp $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)

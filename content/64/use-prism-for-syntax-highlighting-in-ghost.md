@@ -70,7 +70,7 @@ Click on the `Code injection` menu option on the left. You should see two main s
 
 Part 1 - Place the CSS link in the `Site Header` section. It should look something like this:
 
-![](https://64zbit.com/content/images/2020/10/image.png)
+![](https://ghost.64zbit.com/content/images/2020/10/image.png)
 
 Site Header portion of Code injection
 
@@ -80,7 +80,7 @@ Part 2 - The `Site Footer` works the same, just copy and paste the `core` link a
 
 Remember these links are loaded on every page of your blog even if you don't use them on that page, so keep it simple, small and fast.
 
-![](https://64zbit.com/content/images/2020/10/image-1.png)
+![](https://ghost.64zbit.com/content/images/2020/10/image-1.png)
 
 Site Footer portion of Code injection
 
@@ -94,7 +94,7 @@ This puts Ghost into the code entry mode. You can copy and paste your code in he
 
 **Step 2 -** Notice on the right hand side of the code entry box there is a place for language. This is where you type in the language for this code snippet. Ghost has done some of the work for you. You don't have to prepend the language type with `language-` or `lang-` as talked about in the Prism documentation, just put in what you are working with. Such as: js, javascript, html, php, json, css, etc..
 
-![](https://64zbit.com/content/images/2020/10/image-2.png)
+![](https://ghost.64zbit.com/content/images/2020/10/image-2.png)
 
 Sample html script with language type shown in top-right corner
 

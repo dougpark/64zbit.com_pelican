@@ -1,0 +1,1 @@
+<img src="{static}images/file.;\png" alt="image" title="Title" width="50%"/>

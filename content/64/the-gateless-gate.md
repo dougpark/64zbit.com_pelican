@@ -14,4 +14,4 @@ I was playing with CSS and Html and made a nice little web app.
 [Check out my project and read all 49 koans](https://dev.64zbit.com/gate/index.html)
 
 
-![](https://64zbit.com/content/images/2020/10/image-5.png)
+![](https://ghost.64zbit.com/content/images/2020/10/image-5.png)

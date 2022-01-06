@@ -30,7 +30,8 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Navigation
-MENUITEMS = (('Archive', '/archives.html'),
+MENUITEMS = (('Contact', '/pages/contact.html'),
+         ('Archive', '/archives.html'),
          ('Authors', '/authors.html'),
          ('Categories', '/categories.html'),
          ('Tags', '/tags.html'),)

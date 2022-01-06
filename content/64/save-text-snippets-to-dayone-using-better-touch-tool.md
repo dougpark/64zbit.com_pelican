@@ -19,4 +19,4 @@ Better Touch Tool create a DayOne journal entry. Contribute to dougpark/dayone d
 
 
 
-![](https://64zbit.com/content/images/2021/02/image.png)
+![](https://ghost.64zbit.com/content/images/2021/02/image.png)

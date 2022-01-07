@@ -3,7 +3,7 @@ SITENAME = '64Zbit.com'
 SITESUBTITLE = 'Tech is way, WAY interesting'
 # SITEURL = 'https://dev.64zbit.com'
 SITEURL = 'http://localhost:8000'
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 SITEYEAR = '2022'
 
 PATH = 'content'
@@ -36,7 +36,8 @@ MENUITEMS = (('Contact', '/pages/contact.html'),
          ('Categories', '/categories.html'),
          ('Tags', '/tags.html'),)
 
-LINKS = (('GitHub', 'https://github.com/dougpark'),)
+LINKS = (
+        ('Pelican', 'https://twitter.com/getpelican'),)
          
 
 # Social widget

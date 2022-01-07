@@ -36,7 +36,11 @@
 
         <link href="{{ SITEURL }}/theme/css/local.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet"> {% block head %}{% endblock %}
-        </head>
+		{% if article %}
+			<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}"/>
+		{% endif %}
+
+	</head>
         <body>
 
             <div class="container-fluid pl-0 mb-0 bg-dark text-center ml-0 pr-0 pl-0">

@@ -2,10 +2,10 @@ Title: iPhone Device Resolutions
 Date: 2022-01-02 09:57
 Category: Tech	
 Tags: iphone
+Summary: A quick chart showing the different iPhone resolutions.
 
 
-
-<img src="/images/Pasted%20image%2020220102123741.png" alt="Device" width="400"/>
+<img src="./images/Pasted%20image%2020220102123741.png" alt="Device" width="400"/>
 
   
 

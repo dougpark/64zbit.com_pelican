@@ -22,6 +22,36 @@
   --dnp-off-black-font: #15171a;
   --dnp-body-text-font: #728a94;
   --dnp-blue-highlight: #3cb0ef;
+  --dnp-green-highlight: #29c71f;
+--dnp-light-background: #E3EEF3;
+--dnp-code-text: #576ca8;
+--dnp-code-background: #e6e8e9;
+--dnp: #5bbad5;
+
+
+}
+/* Used for code highlighting */
+.highlight {
+	background-color: var(--dnp-code-background);
+	padding: 5px;
+	border-radius: 7px;
+}
+
+/* Used for code highlighting */
+.highlight code {
+	color: var(--dnp-code-text);
+	background-color: var(--dnp-code-background);
+}
+
+/* Used for in-line code snippets */
+code {
+	padding-top: 2px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-radius: 7px;
+	color: var(--dnp-code-text);
+	background-color: var(--dnp-code-background);
 }
 
 .bg-dark {
@@ -127,6 +157,81 @@ p {
 .dnp-text-red {
 	color: var(--dnp-red-highlight);
 }
+
+
+
+blockquote {
+  display:block !important;
+  /* background: #fff; */
+padding: 15px 20px 15px 45px !important;
+
+margin: 0 0 20px !important;
+
+position: relative !important;
+
+  
+  /*Font*/
+  /* font-family: Georgia, serif; */
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+  
+  /*Borders - (Optional)*/
+border-left: 15px solid var(--dnp-red-highlight);
+
+border-right: 2px solid var(--dnp-red-highlight);
+
+  
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+} 
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}
+
+
+
+
+Resources
+
+
+
 
 .my-list-style {
     margin-left: 0;

@@ -8,8 +8,8 @@ Status: hidden
 
 I encourage you to send me your comments regarding 64zbit.com. Unfortunatly, I am terrible at responding. Your best bet is to mention [@64zbit](https://twitter.com/intent/tweet?text=@64zbit) on Twitter. 
 
-## Archives
-[Previous Articles](https://64zbit.com/archives.html)
+## Archive
+[Previous Articles](/archives.html)
 
 ## Twitter
 [Send me a tweet](https://twitter.com/intent/tweet?text=@64zbit)
@@ -17,9 +17,9 @@ I encourage you to send me your comments regarding 64zbit.com. Unfortunatly, I a
 [Follow me on Twitter @64zbit](https://twitter.com/64zbit)
 
 
-## RSS/Atom Feeds
+## Syndicated Feeds
 
- <img src="../images/256px-Feed-icon.svg.png" alt="atom logo" title="atom logo" width="30"/>  [Atom/RSS Feeds](../pages/feeds.html)
+ <img src="/images/256px-Feed-icon.svg.png" alt="atom logo" title="atom logo" width="30"/>  [Atom/RSS Feeds](/pages/feeds.html)
 
 ## GitHub
 [See my GitHub projects](https://github.com/dougpark)

@@ -2,6 +2,7 @@ Title: Publish Pelican To Remote Webserver
 Date: 2021-12-24 14:14
 Modified: 2022-01-05 18:05
 Category: Tech
+Summary: Tips and ideas on best way to publish a static site generated with Pelican using the Makefile and creating Obsidian commands.
 
 ## Makefile
 When you install Pelican be sure to install the Makefile too. This allows you to use the make command to build your static website. It takes a bit of configuration for your specific server details, but it's easy to setup.
@@ -37,5 +38,5 @@ Which allows you to execute the command from a hotkey.
 If you want to manually upload the files then here is a good use of the `scp` command.
 
 ```bash
-	scp -r /Users/doug/OneDrive/www_root/pelican/projects/64zbit/output/* user@64zbit.com:/home/pi/dev_volumes/public_html/apache/new/
+scp -r /Users/doug/OneDrive/www_root/pelican/projects/64zbit/output/* user@64zbit.com:/home/pi/dev_volumes/public_html/apache/new/
 ```

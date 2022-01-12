@@ -37,7 +37,7 @@ MENUITEMS = (('Contact', '/pages/contact.html'),
          ('Tags', '/tags.html'),)
 
 LINKS = (
-        ('Pelican', 'https://twitter.com/getpelican'),)
+        ('GetPelican', 'https://twitter.com/getpelican'),)
          
 
 # Social widget

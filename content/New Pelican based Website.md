@@ -2,6 +2,7 @@ Title: New Pelican based Website
 Date: 2022-01-05 15:40
 Category: Tech	
 Tags: 
+Summary: It's been in the works for awhile, but today I updated my production server settings to show the new website based on the Pelican static site generator.
 
 It's been in the works for awhile, but today I updated my production server settings to show the new website based on the Pelican static site generator.
 

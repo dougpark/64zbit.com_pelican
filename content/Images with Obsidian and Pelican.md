@@ -2,6 +2,7 @@ Title: Images with Obsidian and Pelican
 Date: 2022-01-05 19:46
 Category: Tech	
 Tags: Obsidian, Pelican
+Summary:A short article on how to work with images so they display correctly in Obsidian and when published with Pelican.
 
 A short article on how to work with images so they display correctly in Obsidian and when published with Pelican.
 

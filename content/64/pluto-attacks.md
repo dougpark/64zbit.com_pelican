@@ -4,6 +4,7 @@ Author: D
 Category: Play
 Tags: Play, GameDev, Projects
 Slug: pluto-attacks
+Summary: "The Plutonians are not happy with us calling their home a 'dwarf' planet. So when they discovered a trick in the space time continuum they sent an infinite number of drones to attack Earth. We created an energy weapon that can siphon off the energy from the drones weapons. This powers the Earths vessel and creates a powerful energy shield. Remember, don't let even one alien escape!"
 
 
 

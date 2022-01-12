@@ -1,6 +1,7 @@
 Title: Deep Thoughts
 Date: 2021-12-22 10:57
 Category: Life
+Summary: Deep Thoughts I've learned along the way.
 
 
 Thoughts

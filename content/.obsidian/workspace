@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Pages/Contact.md",
+            "file": "Moxie Marlinspike 'My First Impressions of Web3'.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pages/Contact.md",
+                "file": "Moxie Marlinspike 'My First Impressions of Web3'.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "350fc7aa17fddc32",
   "lastOpenFiles": [
-    "Pages/Contact.md",
-    "Pages/feeds.md",
-    "64/how-to-answer-questions-in-a-helpful-way.md",
-    "64/how-to-think-like-a-programmer-lessons-in-problem-solving.md",
-    "Images with Obsidian and Pelican.md",
-    "To Do.md",
-    "iPhone Device Resolutions.md",
-    "New Pelican based Website.md",
+    "Moxie Marlinspike 'My First Impressions of Web3'.md",
+    "Raspberry Pi as Flask Server.md",
     "Publish Pelican Webserver.md",
-    "Raspberry Pi as Flask Server.md"
+    "New Pelican based Website.md",
+    "64/pluto-attacks.md",
+    "Thoughts/Deep Thoughts.md",
+    "First Robotics Rapid React.md",
+    "Images with Obsidian and Pelican.md",
+    "iPhone Device Resolutions.md",
+    "Using Pelican.md"
   ]
 }

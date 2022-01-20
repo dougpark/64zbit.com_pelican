@@ -5,8 +5,6 @@ Tags: iphone
 Summary: A quick chart showing the different iPhone resolutions.
 
 
-<img src="./images/Pasted%20image%2020220102123741.png" alt="Device" width="400"/>
-
-  
+![iphone](/images/Pasted%20image%2020220102123741.png)
 
 source:[paintcodeapp.com](https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions =x400)

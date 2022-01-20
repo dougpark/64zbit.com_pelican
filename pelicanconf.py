@@ -42,9 +42,10 @@ MENUITEMS = (('Contact', '/pages/contact.html'),
 LINKS = (
         ('GetPelican', 'https://twitter.com/getpelican'),)
          
-
+ 
 # Social widget
-SOCIAL = (('Twitter', 'https://twitter.com/64zbit'),)
+SOCIAL = (('@64zbit on Twitter', 'https://twitter.com/64zbit'),
+          )
            
 # SOCIAL = (('Doug', 'https://twitter.com/64zbit'),
 #            ('social-2', '#'),)

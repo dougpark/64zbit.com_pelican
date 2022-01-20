@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Moxie Marlinspike 'My First Impressions of Web3'.md",
+            "file": "To Do.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Moxie Marlinspike 'My First Impressions of Web3'.md",
+                "file": "To Do.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "350fc7aa17fddc32",
   "lastOpenFiles": [
-    "Moxie Marlinspike 'My First Impressions of Web3'.md",
-    "Raspberry Pi as Flask Server.md",
-    "Publish Pelican Webserver.md",
-    "New Pelican based Website.md",
-    "64/pluto-attacks.md",
-    "Thoughts/Deep Thoughts.md",
+    "To Do.md",
+    "Pages/contact.md",
+    "Pages/feeds.md",
     "First Robotics Rapid React.md",
-    "Images with Obsidian and Pelican.md",
-    "iPhone Device Resolutions.md",
-    "Using Pelican.md"
+    "temp.md",
+    "Raspberry Pi as Flask Server.md",
+    "temp.md.md",
+    "image test.md",
+    "templates/article.md",
+    "Obsidian Community Plugins.md"
   ]
 }

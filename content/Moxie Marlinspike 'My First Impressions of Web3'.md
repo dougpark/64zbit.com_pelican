@@ -2,6 +2,7 @@ Title: Moxie Marlinspike 'My First Impressions of Web3'
 Date: 2022-01-10 12:32
 Category: Tech	
 Tags: Crypto, web3
+Summary: Moxie Marlinspike shares his first impressions of Web3. Seems that Web3 is already a mess.
 
 Moxie Marlinspike 'My First Impressions of Web3'
 

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "To Do.md",
+            "file": "Fonts - Flow and Redacted.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "To Do.md",
+                "file": "Fonts - Flow and Redacted.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "350fc7aa17fddc32",
   "lastOpenFiles": [
+    "Fonts - Flow and Redacted.md",
+    "image test.md",
     "To Do.md",
-    "Pages/contact.md",
     "Pages/feeds.md",
+    "Pages/contact.md",
     "First Robotics Rapid React.md",
     "temp.md",
     "Raspberry Pi as Flask Server.md",
     "temp.md.md",
-    "image test.md",
-    "templates/article.md",
-    "Obsidian Community Plugins.md"
+    "templates/article.md"
   ]
 }

@@ -1,6 +1,9 @@
-Title: To Do
-Date: 2022-01-06 13:40
-Status: hidden   
+Title: To DoTitle: To Do
+Date: 2022-01-20 18:45
+Category: Tech	
+Tags: 
+Status: hidden
+
 
 # Pelican Obsidian
 December 26, 2021

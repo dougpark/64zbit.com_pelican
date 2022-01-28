@@ -12,8 +12,8 @@ SITEYEAR = CURRENTYEAR
 PATH = 'content'
 OUTPUT_PATH = 'output'
 
-THEME = './dnp-aboutwilson'
-#THEME = './pelican-simplegrey'
+# THEME = './dnp-aboutwilson'
+THEME = './dnp-w3css'
 #THEME = './pelican-svbhack-master'
 #THEME = './pelican-themes/pelican-themes/backdrop'
  
@@ -39,12 +39,15 @@ MENUITEMS = (('Contact', '/pages/contact.html'),
          ('Categories', '/categories.html'),
          ('Tags', '/tags.html'),)
 
-LINKS = (
-        ('GetPelican', 'https://twitter.com/getpelican'),)
+LINKS = (('Play Pluto Attacks','https://povingames.com/plutoattacks/'),
+
+        )
          
  
 # Social widget
-SOCIAL = (('@64zbit on Twitter', 'https://twitter.com/64zbit'),
+SOCIAL = (('@64zbit', 'https://twitter.com/64zbit'),
+          ('@GetPelican', 'https://twitter.com/getpelican'),
+          ('@Phaser.io','https://twitter.com/phaser_')
           )
            
 # SOCIAL = (('Doug', 'https://twitter.com/64zbit'),

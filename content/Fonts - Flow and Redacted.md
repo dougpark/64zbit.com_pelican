@@ -5,5 +5,7 @@ Category: Tech
 Tags: font  
   
  When you need to hide something, but still want them to be able to see it later. Of course, they could just look at the source.
+ 
+ Pretty nice looking fonts. Check out the details here:
 
 [Google Fonts Blog: Flow and Redacted: Check out these new options for wireframes and other early-stage designs ](https://fonts.googleblog.com/2022/01/flow-and-redacted-check-out-these-new.html)

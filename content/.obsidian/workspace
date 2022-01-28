@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Fonts - Flow and Redacted.md",
+            "file": "Raspberry Pi as Flask Server.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fonts - Flow and Redacted.md",
+                "file": "Raspberry Pi as Flask Server.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "350fc7aa17fddc32",
   "lastOpenFiles": [
-    "Fonts - Flow and Redacted.md",
-    "image test.md",
-    "To Do.md",
-    "Pages/feeds.md",
-    "Pages/contact.md",
-    "First Robotics Rapid React.md",
-    "temp.md",
     "Raspberry Pi as Flask Server.md",
-    "temp.md.md",
-    "templates/article.md"
+    "Publish Pelican Webserver.md",
+    "Obsidian Community Plugins.md",
+    "image test.md",
+    "help.md",
+    "templates/article.md",
+    "Images with Obsidian and Pelican.md",
+    "Fonts - Flow and Redacted.md",
+    "To Do.md",
+    "Pages/feeds.md"
   ]
 }

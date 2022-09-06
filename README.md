@@ -14,7 +14,8 @@
 - [Pelican Docs](https://docs.getpelican.com/en/latest/quickstart.html)
 - [Install Pelican](https://docs.getpelican.com/en/latest/install.html)
 - Dev: pelican --listen --autoreload
-- Prod: make prod
+- Prod: make publish - to create a published version locally
+- Prod: make build - to create locally and upload to website
 
 
 January 2022

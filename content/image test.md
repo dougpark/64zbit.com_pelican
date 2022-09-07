@@ -6,3 +6,6 @@ Status: hidden
 
 ![](paperplane.png)
 
+today i learned
+
+

@@ -10,7 +10,7 @@ It was tough today.
 
 Wordle 204 6/6
 
-![Whew!](/images/CleanShot%202022-01-09%20at%2016.48.35.png)
+![Whew!](images/CleanShot%202022-01-09%20at%2016.48.35.png)
 
 Whew!
 

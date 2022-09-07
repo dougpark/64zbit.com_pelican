@@ -13,5 +13,5 @@ Status: hidden
 * puts md url at cursor in current
 
 today i learned
-
+TIL
 

@@ -28,5 +28,10 @@
 * [Paste Image v1.0.4](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image)
 * [Paste URL v0.5.4](https://marketplace.visualstudio.com/items?itemName=kukushi.pasteurl)
 
-Initial Release: January 2022 
-Last Update: September 2022
+## Customizations
+* File Templates - created new workspace template: .vscode/templates/Article.md
+* File Templates - modified code to output ISO date format: .../commands/newfilefromtemplate.js: new Date().toISOString())
+
+### Revisions
+- Initial Release: January 2022 
+- Last Update: September 2022

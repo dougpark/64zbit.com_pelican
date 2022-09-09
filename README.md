@@ -27,6 +27,8 @@
 * [File Templates for VSCode v1.1.0](https://marketplace.visualstudio.com/items?itemName=bam.vscode-file-templates)
 * [Paste Image v1.0.4](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image)
 * [Paste URL v0.5.4](https://marketplace.visualstudio.com/items?itemName=kukushi.pasteurl)
+* [Spelling Checker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+
 
 ## Customizations
 * File Templates - created new workspace template: .vscode/templates/Article.md

@@ -34,6 +34,17 @@
 * File Templates - created new workspace template: .vscode/templates/Article.md
 * File Templates - modified code to output ISO date format: .../commands/newfilefromtemplate.js: new Date().toISOString())
 
+## Custom Short-cut keys
+* ctrl-v paste image
+* ctrl-b paste link
+* cmd-n  new file from template
+
+## Tip
+* Markdown comment hack, does not show up in generated html
+* [//]: # (This may be the most platform independent comment)
+
+
+
 ### Revisions
 - Initial Release: January 2022 
 - Last Update: September 2022

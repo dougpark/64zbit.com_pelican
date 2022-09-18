@@ -17,7 +17,7 @@ x   Auto rebuild
 x   Auto upload to Zelda
 
 
-Obisidin Short Cuts
+Obsidian Short Cuts
 - Caps-P 			Publish to prod server
 - Caps-T			Select a template
 - 

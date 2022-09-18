@@ -7,7 +7,7 @@ The [Raspberry Pi Imager](https://www.raspberrypi.org/software) is a great piece
 
 -   update the **wifi ssid** and **password**
 -   change the **hostname** and **default password**
--   change **localisation** settings
+-   change **localization** settings
 
 There is another, better alternative to doing those 3 steps - use the Raspberry Pi Imager secret menu.
 

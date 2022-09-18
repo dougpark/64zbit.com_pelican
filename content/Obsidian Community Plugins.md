@@ -20,7 +20,7 @@ This plugin allows you to execute a shell command from within Obsidian.
 
 It also allows you to execute that command from the Obsidian command pallet. Which allows you to execute the command from a hotkey.
 
-#### Example bash script to copy all files to remote webserver
+#### Example bash script to copy all files to remote web server
 
 If you want to manually upload the files then here is a good use of the `scp` command.
 

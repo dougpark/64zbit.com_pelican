@@ -2,11 +2,11 @@ Title: Raspberry Pi as a Flask Server
 Date: 2022-01-05 18:30
 Category: Tech
 Tags: programming, Pi
-Summary: I created an Air Quality Index gadget made from a Raspberry Pi Zero W with a tiny OLED screen from Adafruit. It shows the AQI from my local PurpleAir sensor. I created a Flask webserver on the Pi so I could remotly see the AQI and change the PurpleAir sensor ID.
+Summary: I created an Air Quality Index gadget made from a Raspberry Pi Zero W with a tiny OLED screen from Adafruit. It shows the AQI from my local PurpleAir sensor. I created a Flask web server on the Pi so I could remotely see the AQI and change the PurpleAir sensor ID.
 
 I created an Air Quality Index gadget made from a Raspberry Pi Zero W with a tiny OLED screen from Adafruit. It shows the AQI from my local PurpleAir sensor. 
 
-I created a Flask webserver on the Pi so I could remotly see the AQI and change the PurpleAir sensor ID.
+I created a Flask web server on the Pi so I could remotely see the AQI and change the PurpleAir sensor ID.
 
 
 

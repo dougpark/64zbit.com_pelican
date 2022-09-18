@@ -1,4 +1,4 @@
-Title: Publish Pelican To Remote Webserver
+Title: Publish Pelican To Remote Web server
 Date: 2021-12-24 14:14
 Modified: 2022-01-05 18:05
 Category: Tech
@@ -33,7 +33,7 @@ It also allows you to execute that command from the Obsidian command pallet.
 
 Which allows you to execute the command from a hotkey.
 
-## Copy all files to remote webserver
+## Copy all files to remote web server
 
 If you want to manually upload the files then here is a good use of the `scp` command.
 

@@ -5,7 +5,7 @@ Tags: VSCODE
 Summary: Allows you to paste images into md documents in VS Code
 
 ## VS Code Plugin
-Paste Image is a VS Code plugin that allows you to paste images into md documents. It's currently on versoin 1.0.4 with over 226,000 downloads.
+Paste Image is a VS Code plugin that allows you to paste images into md documents. It's currently on version 1.0.4 with over 226,000 downloads.
 
 The developer website is found at [GitHub](https://github.com/mushanshitiancai/vscode-paste-image)
 
@@ -20,6 +20,6 @@ The only downside is it was last updated on 01/23/2019.
     * for setting path and filename options
     * pastes image into current_document_folder/images
     * prepends documentname_ to image name
-    * pastes formated md url at cursor in current
+    * pastes formatted md url at cursor in current
 * change the keyboard shortcut 
     * I use ctrl-v to paste image from clipboard

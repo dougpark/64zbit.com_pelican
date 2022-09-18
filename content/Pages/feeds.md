@@ -11,7 +11,7 @@ Just click and then register with your favorite RSS reader, like [NetNewsWire](h
 #### <img src="/images/256px-Feed-icon.svg.png" alt="atom logo" title="atom logo" width="30"/> Atom Feeds [Same as RSS but better](https://en.wikipedia.org/wiki/Atom_%28Web_standard%29)
 
 
-Suscribe to the main feed
+Subscribe to the main feed
 
 [All Articles](https://64zbit.com/feeds/all.atom.xml)
 

@@ -41,7 +41,7 @@
 
 ## Tip
 * Markdown comment hack, does not show up in generated html
-* [//]: # (This may be the most platform independent comment)
+* ```[//]: # (This may be the most platform independent comment)```
 
 
 

@@ -19,7 +19,7 @@
 - [Install Pelican](https://docs.getpelican.com/en/latest/install.html)
 
 ## Usage
-- Dev: pelican --listen --autoreload
+- Develop: pelican --listen --autoreload
 - Prod: make publish - to create a published version locally
 - Prod: make build - to create locally and upload to website
 
@@ -32,7 +32,8 @@
 
 ## Customizations
 * File Templates - created new workspace template: .vscode/templates/Article.md
-* File Templates - modified code to output ISO date format: .../commands/newfilefromtemplate.js: new Date().toISOString())
+* File Templates - modified code to output ISO date format:
+* .../commands/newfilefromtemplate.js: new Date().toISOString())
 
 ## Custom Short-cut keys
 * ctrl-v paste image

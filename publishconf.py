@@ -11,7 +11,8 @@ SITEURL = 'https://64zbit.com'
 RELATIVE_URLS = False
 
 # OUTPUT_PATH = 'publish'
-
+FEED_ALL_JSON = 'feeds/all.json'
+CATEGORY_FEED_JSON = 'feeds/%s.json'
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 

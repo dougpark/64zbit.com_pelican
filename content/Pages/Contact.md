@@ -19,7 +19,7 @@ I encourage you to send me your comments regarding 64zbit.com. Unfortunately, I 
 
 ## Syndicated Feeds
 
- <img src="/images/256px-Feed-icon.svg.png" alt="atom logo" title="atom logo" width="30"/>  [Atom/RSS Feeds](/pages/feeds.html)
+ <img src="/images/256px-Feed-icon.svg.png" alt="atom logo" title="atom logo" width="30"/>  [Atom/RSS/JSON Feeds](/pages/feeds.html)
 
 ## GitHub
 [My GitHub projects](https://github.com/dougpark)

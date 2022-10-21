@@ -18,6 +18,9 @@
 - [Pelican Docs](https://docs.getpelican.com/en/latest/quickstart.html)
 - [Install Pelican](https://docs.getpelican.com/en/latest/install.html)
 
+## Pelican Plug-Ins
+- [GitHub - andrewheiss/pelican_json_feed: Pelican plugin to add a JSON Feed file to your site](https://github.com/andrewheiss/pelican_json_feed)
+
 ## Usage
 - Develop: pelican --listen --autoreload
 - Prod: make publish - to create a published version locally

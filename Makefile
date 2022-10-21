@@ -38,7 +38,9 @@ endif
 
 
 help:
-	@echo 'Makefile for a pelican Web site                                           '
+	@echo 'Makefile for a pelican Web site 
+	@echo ' make publish - build local'
+	@echo ' make build - build and publish to 64zbit.com'                                          '
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
 	@echo '   make html                           (re)generate the web site          '

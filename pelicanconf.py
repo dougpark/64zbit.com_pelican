@@ -17,15 +17,15 @@ THEME = './dnp-w3css'
 #THEME = './pelican-svbhack-master'
 #THEME = './pelican-themes/pelican-themes/backdrop'
  
-
 TIMEZONE = 'America/Chicago'
-
 DEFAULT_LANG = 'en'
 
-# PLUGIN_PATHS = ['voce/plugins']
-# PLUGINS = ['assets']
+PLUGIN_PATHS = ['./plugins']
+# https://github.com/andrewheiss/pelican_json_feed
+PLUGINS = ['pelican_json_feed']
 
 # Feed generation is usually not desired when developing
+FEED_ALL_JSON = None
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None

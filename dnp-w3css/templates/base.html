@@ -177,6 +177,14 @@
                                     <a class="dnp-link-white" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml"> <i class="fa fa-rss "></i> RSS feed</a>
                                 </li>
                                 {% endif %}
+{% if FEED_ALL_JSON %}
+    <li>
+        <a class="dnp-link-white" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_JSON }}" type="application/json">
+            <i class="fa fa-rss "></i>
+            JSON feed</a>
+    </li>
+{% endif %}
+
 
                             </ul>
                         </div>

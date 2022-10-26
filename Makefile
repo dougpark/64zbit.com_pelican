@@ -39,8 +39,9 @@ endif
 
 help:
 	@echo 'Makefile for a pelican Web site'
-	@echo ' make publish - build local'
-	@echo ' make build - build and publish to 64zbit.com'                            
+	@echo ' make publish - build production local'
+	@echo ' make build - build production and publish to 64zbit.com' 
+	@echo ' make dev - build and run local webserver'                           
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
 	@echo '   make html                           (re)generate the web site          '
@@ -61,7 +62,7 @@ help:
 	@echo '                                                                          '
 
 pinboard:
-	python3 getLinks.py
+	python3 getPinboard.py
 
 html:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
@@ -81,7 +82,7 @@ serve-global:
 devserver:
 	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
-dev:
+dev: pinboard
 	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 devserver-global:

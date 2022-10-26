@@ -31,7 +31,7 @@ endif
 
 SERVER ?= "0.0.0.0"
 
-PORT ?= 0
+PORT ?= 8000
 ifneq ($(PORT), 0)
 	PELICANOPTS += -p $(PORT)
 endif
@@ -60,6 +60,9 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
+pinboard:
+	python3 getLinks.py
+
 html:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
@@ -84,7 +87,7 @@ dev:
 devserver-global:
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
 
-publish:
+publish: pinboard
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
 ssh_upload: publish

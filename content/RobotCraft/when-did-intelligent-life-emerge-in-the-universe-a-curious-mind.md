@@ -1,6 +1,6 @@
 Title: When Did Intelligent Life Emerge in the Universe? » A Curious Mind
 Date: 2013-03-13 10:11
-Author: Doug
+Author: Doug 
 Category: RobotCraft
 Slug: when-did-intelligent-life-emerge-in-the-universe-a-curious-mind
 Status: published

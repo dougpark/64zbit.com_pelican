@@ -1,6 +1,6 @@
 Title: Who are we?
 Date: 2016-03-24 17:17
-Author: Doug
+Author: Doug 
 Category: RobotCraft
 Slug: who-are-we
 Status: published

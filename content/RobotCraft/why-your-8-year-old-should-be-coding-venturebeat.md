@@ -1,6 +1,6 @@
 Title: Why your 8-year-old should be coding | VentureBeat
 Date: 2013-04-16 14:22
-Author: Doug
+Author: Doug 
 Category: RobotCraft
 Slug: why-your-8-year-old-should-be-coding-venturebeat
 Status: published

@@ -1,6 +1,6 @@
 Title: Feeds
 Date: 2022-01-06 13:40
-Status: hidden
+Status: published
 
 ## Syndicated Feeds
 

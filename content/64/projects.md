@@ -1,9 +1,9 @@
-Title: Projects
+Title: Future Projects
 Date: 2020-10-23 22:20
-Author: D
-Category: RobotCraft
+Author: Doug
+Category: Projects
 Tags: Projects
-Slug: projects
+Slug: future-projects
 
 I've been doing this for decades and now I want to be an HTML5 game devloper. I'm starting with a server! Well, I have very little experience with game development, graphics, animation, sound, so it's going to be a fun journey.
 

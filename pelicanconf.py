@@ -35,11 +35,13 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Navigation
-MENUITEMS = (('Contact', '/pages/contact.html'),
-         ('Archive', '/archives.html'),
-         ('Authors', '/authors.html'),
-         ('Categories', '/categories.html'),
-         ('Tags', '/tags.html'),)
+# ('Contact', '/pages/contact.html'),
+#  ('Authors', '/authors.html'),
+# ('Tags', '/tags.html')
+MENUITEMS = (('Archive', '/archives.html'),
+        
+                ('Categories', '/categories.html'),
+            )
 
 LINKS = (('Play Pluto Attacks','https://povingames.com/plutoattacks/'),
 

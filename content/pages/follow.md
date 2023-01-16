@@ -6,7 +6,11 @@ Status: published
 
 I encourage you to send me your comments regarding 64zbit.com. Unfortunately, I am terrible at responding. Your best bet is to mention [@64zbit](https://twitter.com/intent/tweet?text=@64zbit) on Twitter. 
 
-## Twitter
+## Social
+[Follow on Mastodon](https://mastodon.social/@Parkdn)
+
+[Mastodon account](@Parkdn@mastodon.social)
+
 [Send me a tweet](https://twitter.com/intent/tweet?text=@64zbit)
 
 [Follow @64Zbit on Twitter](https://twitter.com/64zbit)

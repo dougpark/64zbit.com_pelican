@@ -1,6 +1,7 @@
 # https://github.com/lionheart/pinboard.py
 import pinboard
 import os.path
+from urllib.parse import urlparse
 
 exec(open('config/.token').read())
 
@@ -45,6 +46,9 @@ for bookmarks in results:
             f.write('Summary: '+ str(summary[0])+'\n')
             f.write('\n')
 
+            domain = urlparse(bookmarks.url).netloc
+            f.write('## [['+domain+']]('+bookmarks.url+')\n')
+
             # Add markdown blockquote > to each line
             # https://ubuntuforums.org/showthread.php?t=1110854
             text = bookmarks.extended 
@@ -52,7 +56,7 @@ for bookmarks in results:
             f.write(joined_group+'\n')
 
             f.write('\n')
-            f.write('[Link to the original article]('+bookmarks.url+')\n')
+            #f.write('[Link to the original article ('+domain+')]('+bookmarks.url+')\n')
 
         # [JSON Feed](https://www.jsonfeed.org)
         # f.write('\n'.join(bookmarks.description))

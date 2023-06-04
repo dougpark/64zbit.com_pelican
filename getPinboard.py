@@ -47,7 +47,7 @@ for bookmarks in results:
             f.write('\n')
 
             domain = urlparse(bookmarks.url).netloc
-            f.write('## [['+domain+']]('+bookmarks.url+')\n')
+            f.write('## [Read the whole story at '+domain+']('+bookmarks.url+')\n')
 
             # Add markdown blockquote > to each line
             # https://ubuntuforums.org/showthread.php?t=1110854

@@ -1,4 +1,4 @@
 # Example .token file
 # Copy or rename this file to .token
 # Place your api token code between the single quotes
-pinboard_token = '987asdf987asdf98'
+pinboard_token = 'user:987asdf987asdf98'

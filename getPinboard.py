@@ -46,16 +46,15 @@ for bookmarks in results:
             f.write('Summary: '+ str(summary[0])+'\n')
             f.write('\n')
 
-            domain = urlparse(bookmarks.url).netloc
-            f.write('## [Read the full article at '+domain+']('+bookmarks.url+')\n')
-
             # Add markdown blockquote > to each line
             # https://ubuntuforums.org/showthread.php?t=1110854
             text = bookmarks.extended 
             joined_group = '\n'.join(["> %s" % line for line in text.split('\n')]) 
             f.write(joined_group+'\n')
-
             f.write('\n')
+
+            domain = urlparse(bookmarks.url).netloc
+            f.write('[Continue reading on '+domain+']('+bookmarks.url+')\n')
             #f.write('[Link to the original article ('+domain+')]('+bookmarks.url+')\n')
 
         # [JSON Feed](https://www.jsonfeed.org)

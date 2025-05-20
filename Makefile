@@ -63,7 +63,7 @@ help:
 	@echo '                                                                          '
 
 pinboard:
-	python3 getPinboard.py
+	python3.9 getPinboard.py
 
 publish: pinboard
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)

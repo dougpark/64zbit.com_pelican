@@ -54,7 +54,7 @@ for bookmarks in results:
             f.write('\n')
 
             domain = urlparse(bookmarks.url).netloc
-            f.write('[Continue reading on '+domain+']('+bookmarks.url+')\n')
+            f.write('[Read the full article at '+domain+']('+bookmarks.url+')\n')
             #f.write('[Link to the original article ('+domain+')]('+bookmarks.url+')\n')
 
         # [JSON Feed](https://www.jsonfeed.org)

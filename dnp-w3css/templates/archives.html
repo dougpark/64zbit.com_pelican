@@ -7,11 +7,25 @@
 <div class="dnp-search container-fluid mb-3">
     <label for="searchBox" class="form-label">Search Archives</label>
 
-    <div class="input-group">
-        <input type="text" id="searchBox" class="form-control" placeholder="Search archives..." />
-        <button class="btn btn-outline-secondary" id="clearBtn" title="Clear Search">
-            <i class="fa-solid fa-delete-left text-danger"></i>
-        </button>
+    <div class="position-relative" style="width: 100%;">
+        <input type="text" id="searchBox" class="form-control pe-5" placeholder="Search archives..." />
+        <span id="clearSearchIcon" class="position-absolute" style="
+        top: 50%;
+        right: 0.75rem;
+        transform: translateY(-50%);
+        font-size: 0.75rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+      ">
+            ×
+        </span>
     </div>
 
     <div class="d-flex justify-content-between align-items-center mt-2 flex-wrap gap-2">
@@ -27,30 +41,92 @@
 
 <script>
     const searchBox = document.getElementById('searchBox');
-    const clearBtn = document.getElementById('clearBtn');
+    const clearIcon = document.getElementById('clearSearchIcon');
     const toggleSummaryBtn = document.getElementById('toggleSummaryBtn');
     let summariesVisible = false;
 
-    // Search functionality
+    function setSummaryVisibility(visible) {
+        summariesVisible = visible;
+
+        const summaries = document.querySelectorAll('.hidden-summary');
+        summaries.forEach(summary => {
+            summary.style.display = visible ? 'block' : 'none';
+        });
+
+        const toggleIcon = toggleSummaryBtn.querySelector('i');
+        toggleIcon.classList.toggle('fa-toggle-off', !visible);
+        toggleIcon.classList.toggle('fa-toggle-on', visible);
+    }
+
     searchBox.addEventListener('input', function () {
-        const query = this.value.toLowerCase();
+        const query = this.value.trim().toLowerCase();
         const items = document.querySelectorAll('.archive-item');
 
+        // Show or hide the clear "×"
+        clearIcon.style.display = query ? 'inline-block' : 'none';
+
         items.forEach(item => {
-            const text = item.textContent.toLowerCase();
-            item.style.display = text.includes(query) ? '' : 'none';
+            // Restore original HTML from backup, if available
+            if (item.dataset.originalHtml) {
+                item.innerHTML = item.dataset.originalHtml;
+            } else {
+                item.dataset.originalHtml = item.innerHTML;
+            }
+
+            // Check if it should be shown
+            const textContent = item.textContent.toLowerCase();
+            const show = query === '' || textContent.includes(query);
+            item.style.display = show ? '' : 'none';
+
+            if (show && query) {
+                highlightText(item, query);
+            }
         });
+        // Re-apply summary visibility after filtering/highlighting
+        setSummaryVisibility(summariesVisible);
     });
 
-    // Clear search input
-    clearBtn.addEventListener('click', function () {
+    clearIcon.addEventListener('click', function () {
         searchBox.value = '';
-        searchBox.dispatchEvent(new Event('input')); // Trigger search to reset list
+        clearIcon.style.display = 'none';
+        searchBox.dispatchEvent(new Event('input'));
     });
+
+    function highlightText(element, keyword) {
+        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+
+        const textNodes = [];
+        while (walker.nextNode()) {
+            const node = walker.currentNode;
+            if (node.nodeValue.trim()) {
+                textNodes.push(node);
+            }
+        }
+
+        textNodes.forEach(node => {
+            const value = node.nodeValue;
+            const parent = node.parentNode;
+
+            // Skip script/style/code/pre tags
+            if (['SCRIPT', 'STYLE', 'CODE', 'PRE'].includes(parent.tagName)) return;
+
+            const regex = new RegExp(`(${keyword})`, 'gi');
+            if (regex.test(value)) {
+                const highlighted = value.replace(regex, '<mark>$1</mark>');
+                const span = document.createElement('span');
+                span.innerHTML = highlighted;
+                parent.replaceChild(span, node);
+            }
+        });
+    }
+
+
 
     // Toggle summaries visibility
     toggleSummaryBtn.addEventListener('click', function () {
-        summariesVisible = !summariesVisible;
+
+        setSummaryVisibility(!summariesVisible);
+
         const summaries = document.querySelectorAll('.hidden-summary');
 
         summaries.forEach(summary => {
@@ -63,6 +139,8 @@
         toggleIcon.classList.toggle('fa-toggle-on', summariesVisible);
     });
 </script>
+
+
 <h1>Archive</h1>
 
 

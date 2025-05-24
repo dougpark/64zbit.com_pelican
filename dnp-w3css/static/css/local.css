@@ -614,3 +614,13 @@ button i {
   text-decoration: none;
   transform: translateY(-2px); /* nudges upward by 2px */
 }
+
+mark {
+  background-color: #ffe066; /* custom highlight color */
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+#clearSearchIcon:hover {
+  background-color: #dc3545; /* Bootstrap danger red */
+}

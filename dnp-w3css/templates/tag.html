@@ -2,44 +2,116 @@
 {% block description %}All posts which refer to tag {{ tag }}{% endblock %}
 {% block title %}{{ tag }} — {{ SITENAME }}{% endblock %}
 {% block content %}
+
+
+
+<div class="dnp-search container-fluid mb-3">
+    <label for="searchBox" class="form-label">Search Tags</label>
+
+    <div class="input-group">
+        <input type="text" id="searchBox" class="form-control" placeholder="Search tags..." />
+        <button class="btn btn-outline-secondary" id="clearBtn" title="Clear Search">
+            <i class="fa-solid fa-delete-left text-danger"></i>
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-2 flex-wrap gap-2">
+        <button class="btn btn-sm btn-outline-primary" id="toggleSummaryBtn" title="Toggle Summaries">
+            <span class="me-1">Show Summaries</span>
+            <i class="fa-solid fa-toggle-off"></i>
+        </button>
+    </div>
+</div>
+
+
+
+
+<script>
+    const searchBox = document.getElementById('searchBox');
+    const clearBtn = document.getElementById('clearBtn');
+    const toggleSummaryBtn = document.getElementById('toggleSummaryBtn');
+    let summariesVisible = false;
+
+    // Search functionality
+    searchBox.addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        const items = document.querySelectorAll('.archive-item');
+
+        items.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(query) ? '' : 'none';
+        });
+    });
+
+    // Clear search input
+    clearBtn.addEventListener('click', function () {
+        searchBox.value = '';
+        searchBox.dispatchEvent(new Event('input')); // Trigger search to reset list
+    });
+
+    // Toggle summaries visibility
+    toggleSummaryBtn.addEventListener('click', function () {
+        summariesVisible = !summariesVisible;
+        const summaries = document.querySelectorAll('.hidden-summary');
+
+        summaries.forEach(summary => {
+            summary.style.display = summariesVisible ? 'block' : 'none';
+        });
+
+        // Update the icon
+        const toggleIcon = toggleSummaryBtn.querySelector('i');
+        toggleIcon.classList.toggle('fa-toggle-off', !summariesVisible);
+        toggleIcon.classList.toggle('fa-toggle-on', summariesVisible);
+    });
+</script>
+
+
 <h1>Tag <small>{{tag}}</small></h1>
-<table class="table">
-    <tbody>
+<div>
+
     {% for article in articles %}
-        <tr>
-            <td>
-                <a href="{{ SITEURL }}/{{ article.url }}">
-                    <h2 itemprop="name headline">{{ article.title }}</h2>
-                </a>
-                <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.date|strftime('%B %d, %Y %I:%M %p %Z') }}</time>
-                &nbsp;—&nbsp;
+    <div class="archive-item" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <div>
+            <!-- <a class="dnp-index-title" href=" {{ SITEURL }}/{{ article.url }}">
+            <h2 itemprop="name headline">{{ article.title }}</h2>
+        </a> -->
+
+            <time class="dnp-index-date" datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{
+                article.date|strftime('%B %d, %Y') }}</time>
+
+            <!-- &nbsp;—&nbsp;
                 <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
                     <span itemprop="name">{{article.author or "Wilson Freitas"}}</span>
-                </span>
+                </span> -->
             {% if article.category %}
-            <div>
+            <!-- <div>
                 Category:
                 <span itemprop="articleSection">
                     <a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a>
                 </span>
-            </div>
+            </div> -->
             {% endif %}
             {% if article.tags %}
-            <div>
-                Tags:
+            <span>
+
                 {% for tag in article.tags %}
-                <span itemprop="keywords">
-                    <a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
+                <span class="post-tags" itemprop="keywords">
+                    <a class="post-tags" href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
                 </span>
                 {% endfor %}
-            </div>
-            {% endif %}
-                <p class="mb-3"></p>
-                <span class="dnp-article-summary">{{ article.summary }}</span>
-            </td>
-        
-        </tr>
+            </span>
+        </div>
+        {% endif %}
+        <span>
+            <a href="{{ SITEURL }}/{{ article.url }}" class="archive-link">{{ article.title }}</a>
+        </span>
+
+        <span class="hidden-summary">{{ article.summary }}</span>
+
+
+    </div>
     {% endfor %}
-    </tbody>
-</table>
+
+</div>
 {% endblock %}

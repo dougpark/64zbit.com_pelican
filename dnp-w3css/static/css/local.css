@@ -473,10 +473,16 @@ div.collapseheader {
   /* transition: color 0.3s, border-color 0.3s; */
 }
 
+.dnp-index-title a {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
 .dnp-index-title:hover {
   color: var(--dnp-red-highlight);
   /* background-color: var(--dnp-highlight); */
   text-decoration: none;
+  transform: translateY(-1px); /* nudges upward by 2px */
   /*border-bottom: 2px solid var(--dnp-highlight) !important;*/ /* red underline */
 }
 
@@ -575,19 +581,18 @@ button i {
 .article-body a::after {
   content: "\f35d"; /* Font Awesome Unicode for arrow-up-right-from-square */
   font-family: "Font Awesome 6 Free";
-  font-weight: 900; /* Use 400 for regular weight icons */
+  font-weight: 900;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.75em;
-  opacity: 0;
-  transition: opacity 0.3s ease, right 0.3s ease;
+  opacity: 1; /* Always visible */
+  transition: right 0.3s ease; /* Remove opacity transition if not used */
 }
 
 .article-body a:hover::after {
-  opacity: 1;
-  right: -0.2em;
+  right: -0.2em; /* Subtle nudge animation */
 }
 
 .post-tags {
@@ -599,9 +604,13 @@ button i {
   border-radius: 4px;
   font-size: 0.9em;
 }
+.post-tags a {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
 
 .post-tags a:hover {
   color: var(--dnp-highlight);
-  /* color: #005f73; */
   text-decoration: none;
+  transform: translateY(-2px); /* nudges upward by 2px */
 }

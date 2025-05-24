@@ -4,7 +4,7 @@ CURRENTYEAR = date.today().year
 AUTHOR = 'Doug'
 SITENAME = '64Zbit.com'
 SITESUBTITLE = 'Tech is way, WAY interesting'
-# SITEURL = 'https://dev.64zbit.com'
+
 SITEURL = 'http://localhost:8000'
 RELATIVE_URLS = False
 SITEYEAR = CURRENTYEAR  

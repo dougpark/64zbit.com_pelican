@@ -85,8 +85,8 @@
 
                 <span>
                     {% for tag in article.tags %}
-                    <span class="dnp-index-tag" itemprop="keywords">
-                        | <a class="dnp-index-tag" href="{{ SITEURL }}/{{ tag.url }}" rel="tag"> {{ tag }}</a>
+                    <span class="post-tags" itemprop="keywords">
+                        <a class="post-tags" href="{{ SITEURL }}/{{ tag.url }}" rel="tag"> {{ tag }}</a>
                     </span>
                     {% endfor %}
                 </span>

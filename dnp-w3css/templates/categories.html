@@ -1,11 +1,19 @@
 {% extends "base.html" %}
-{% block description %}The Categories page lists all categories used to classify the posts. Each post is categorized by a category helping readers find out easily what they are looking for.{% endblock %}
+{% block description %}The Categories page lists all categories used to classify the posts. Each post is categorized by
+a category helping readers find out easily what they are looking for.{% endblock %}
 {% block title %}Categories — {{ SITENAME }}{% endblock %}
 {% block content %}
+
+<h1> Search </h1>
+<script async src="https://cse.google.com/cse.js?cx=c6a1cb08b31374729">
+</script>
+<div class="gcse-search"></div>
+
+
 <h1>Categories</h1>
 <ul>
-{% for category, articles in categories %}
+	{% for category, articles in categories %}
 	<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</li>
-{% endfor %}
+	{% endfor %}
 </ul>
 {% endblock %}

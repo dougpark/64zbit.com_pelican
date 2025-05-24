@@ -34,6 +34,11 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+TAG_CLOUD_STEPS = 4         # Number of different sizes
+TAG_CLOUD_MAX_ITEMS = 100   # Max tags to show
+
+# DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives']
+
 # Navigation
 # ('Contact', '/pages/contact.html'),
 #  ('Authors', '/authors.html'),

@@ -42,125 +42,86 @@
 
 
     <!-- bootstrap css -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.1/dist/simplex/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
-    <link href="{{ SITEURL }}/theme/css/local.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet"> {% block head %}{% endblock %} {% if article %}
+    <link href="{{ SITEURL }}/theme/css/local.css?v=2" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
+    {% block head %}{% endblock %} {% if article %}
     <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}" /> {% endif %}
 
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ SITEURL }}/feeds/all.rss" />
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ SITEURL }}/feeds/all.atom.xml" />
 </head>
 
 <body>
 
     <div class="container-fluid pl-0 mb-0 bg-white text-center ml-0 pr-0 pl-0">
-
-        <nav class="navbar navbar-expand-sm p-0 m-0 dnp-navbar-color dnp-navbar-adjust justify-content-center">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    				<span class="navbar-toggler-icon"></span>
-                    			</button> --><a class="navbar-toggler dnp-nav-toggler  p-2 " data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"> MENU
+        <!-- <nav class="navbar navbar-expand-sm p-0 m-0 dnp-navbar-color dnp-navbar-adjust justify-content-center">
+            <a class="navbar-toggler dnp-nav-toggler  p-2 " data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> MENU
             </a>
 
             <div class="collapse navbar-collapse justify-content-center mx-0" id="navbarSupportedContent">
                 <ul class="navbar-nav dnp-navbar-color">
-                    <!-- <li class="nav-item">
-                            							<a class="nav-link dnp-link-white" href="{{ SITEURL }}">Home</a>
-                            						</li> -->
-                    <!-- <li class="nav-item">
-                            						<a class="dnp-nav-menu nav-link mr-4" href="{{ SITEURL }}">Home</a>
-                            					</li> -->
-
-                    <!-- 
-                    <li class="nav-item">
-                        <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/category/link.html">LINK</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/category/tech.html">TECH</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/category/life.html">LIFE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/category/play.html">PLAY
-                                </a>
-                    </li> 
--->
-                    <!--                     
-                    <li class="nav-item">
-                        <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/category/projects.html">PROJECTS</a>
-                    </li> -->
 
                     <li class="nav-item">
                         <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/archives.html">ARCHIVE</a>
                     </li>
 
-
                     <li class="nav-item">
                         <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/pages/contact.html">CONTACT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/feeds/all.atom.xml">RSS</a>
+                        <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/feeds/all.rss">RSS</a>
                     </li>
                     <li class="nav-item">
                         <a class="dnp-nav-menu nav-link mx-2" href="{{ SITEURL }}/pages/search.html">SEARCH</a>
                     </li>
-                    <!-- <li class="nav-item">
-                            							<a class="nav-link" href="#">Link</a>
-                            						</li>
-                            						<li class="nav-item dropdown">
-                            							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            								aria-haspopup="true" aria-expanded="false">
-                            								Dropdown
-                            							</a>
-                            							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            								<a class="dropdown-item" href="#">Action</a>
-                            								<a class="dropdown-item" href="#">Another action</a>
-                            								<div class="dropdown-divider"></div>
-                            								<a class="dropdown-item" href="#">Something else here</a>
-                            							</div>
-                            						</li> -->
-                    <!-- <li class="nav-item">
-                            							<a class="nav-link disabled" href="#">Disabled</a>
-                            						</li> -->
+
                 </ul>
-                <!-- <form class="form-inline my-2 my-lg-0">
-                        						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        					</form> -->
+
+            </div>
+        </nav> -->
+
+        <nav class="navbar p-0 m-0 dnp-navbar-color dnp-navbar-adjust justify-content-center">
+            <div class="navbar-collapse d-flex justify-content-center w-100">
+                <ul class="navbar-nav flex-row dnp-navbar-color">
+                    <li class="nav-item">
+                        <a class="dnp-nav-menu nav-link px-2" href="{{ SITEURL }}/archives.html">ARCHIVE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dnp-nav-menu nav-link px-2" href="{{ SITEURL }}/pages/contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dnp-nav-menu nav-link px-2" href="{{ SITEURL }}/feeds/all.rss">RSS</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="dnp-nav-menu nav-link px-2" href="{{ SITEURL }}/pages/search.html">SEARCH</a>
+                    </li> -->
+                </ul>
             </div>
         </nav>
 
-
-        <h1 class="mt-3">
+        <div class="mt-3 dnp-site-title">
             <a class="dnp-logo-no-line" href="{{ SITEURL }}/">
                 <span class="dnp-logo-1">64</span><span class="dnp-logo-2">Z</span><span
                     class="dnp-logo-1">bit.com</span>
             </a>
-            <br> {% if SITESUBTITLE %}
-            <small class="dnp-subTitle">{{ SITESUBTITLE }}</small> {% endif %}
-
-        </h1>
-
-
-
+        </div>
+        {% if SITESUBTITLE %}
+        <small class="dnp-subTitle">{{ SITESUBTITLE }}</small> {% endif %}
     </div>
-
 
     <div class="container mx-auto">
 
+        <!-- Custom horitontal rule -->
         <div class="row">
             <div class="mt-0 col-md-8 col-md-offset-2 text-center mx-auto">
-
                 <hr class="custom-hr">
-
             </div>
         </div>
 
@@ -172,28 +133,17 @@
         <!-- <hr> -->
     </div>
     <!-- /container -->
-    <!-- <footer class="aw-footer"> -->
 
-    <!-- <div class="container bg-dark"> -->
-    <!-- <div class="row"> -->
+    <!-- Footer -->
     <div class="col-md-12 dnp-text-dark text-center center-block aw-bottom">
         <div class="dnp-footer-logo">
             <a class="dnp-logo-no-line" href="{{ SITEURL }}/">
-                <span class="dnp-logo-1">64</span><span class="dnp-logo-2">Z</span><span
-                    class="dnp-logo-1">bit.com</span>
+                <span class="dnp-logo-1f">64</span><span class="dnp-logo-2f">Z</span><span
+                    class="dnp-logo-1f">bit.com</span>
             </a>
             <p>&copy; {{ SITENAME }} {{ SITEYEAR }} All rights reserved</p>
-
-            <!-- <p>Powered by Pelican</p> -->
         </div>
-        <!-- </div> -->
-        <!-- </div> -->
-        <!-- </footer> -->
-        <!-- JavaScript -->
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-                	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 
-        <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js"></script> -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous">
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

@@ -3,18 +3,107 @@
 {% block title %}Archive — {{ SITENAME }}{% endblock %}
 {% block content %}
 
+
+<div class="dnp-search container-fluid mb-3">
+    <label for="searchBox" class="form-label">Search Archives</label>
+
+    <div class="input-group">
+        <input type="text" id="searchBox" class="form-control" placeholder="Search archives..." />
+        <button class="btn btn-outline-secondary" id="clearBtn" title="Clear Search">
+            <i class="fa-solid fa-delete-left text-danger"></i>
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-2 flex-wrap gap-2">
+        <button class="btn btn-sm btn-outline-primary" id="toggleSummaryBtn" title="Toggle Summaries">
+            <span class="me-1">Show Summaries</span>
+            <i class="fa-solid fa-toggle-off"></i>
+        </button>
+    </div>
+</div>
+
+
+
+
+<script>
+    const searchBox = document.getElementById('searchBox');
+    const clearBtn = document.getElementById('clearBtn');
+    const toggleSummaryBtn = document.getElementById('toggleSummaryBtn');
+    let summariesVisible = false;
+
+    // Search functionality
+    searchBox.addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        const items = document.querySelectorAll('.archive-item');
+
+        items.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(query) ? '' : 'none';
+        });
+    });
+
+    // Clear search input
+    clearBtn.addEventListener('click', function () {
+        searchBox.value = '';
+        searchBox.dispatchEvent(new Event('input')); // Trigger search to reset list
+    });
+
+    // Toggle summaries visibility
+    toggleSummaryBtn.addEventListener('click', function () {
+        summariesVisible = !summariesVisible;
+        const summaries = document.querySelectorAll('.hidden-summary');
+
+        summaries.forEach(summary => {
+            summary.style.display = summariesVisible ? 'block' : 'none';
+        });
+
+        // Update the icon
+        const toggleIcon = toggleSummaryBtn.querySelector('i');
+        toggleIcon.classList.toggle('fa-toggle-off', !summariesVisible);
+        toggleIcon.classList.toggle('fa-toggle-on', summariesVisible);
+    });
+</script>
 <h1>Archive</h1>
 
-<table class="table">
-    <tbody>
-    {% for article in dates %}
-        <tr>
-        <td>{{ article.date.strftime("%d %b %Y") }}</td>
-        <td><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></td>
-        </tr>
+
+
+<div class="archive-list">
+
+    {% for year, articles_in_year in dates|sort(attribute='date', reverse=True)|groupby('date.year')|reverse %}
+    <h3 class="dnp-archive-year">{{ year }}</h3>
+    <div class="archive-group">
+        {% for article in articles_in_year %}
+        <div class="archive-item">
+            <div>
+                <span class="dnp-index-date">{{ article.date.strftime("%d %b") }}</span>
+
+                <span class="dnp-index-tag" itemprop="articleSection">
+                    | <a class="dnp-index-tag" href="{{ SITEURL }}/{{ article.category.url }}" rel="category"> {{
+                        article.category
+                        }}</a>
+                </span>
+
+                <span>
+                    {% for tag in article.tags %}
+                    <span class="dnp-index-tag" itemprop="keywords">
+                        | <a class="dnp-index-tag" href="{{ SITEURL }}/{{ tag.url }}" rel="tag"> {{ tag }}</a>
+                    </span>
+                    {% endfor %}
+                </span>
+            </div>
+
+            <span>
+                <a href="{{ SITEURL }}/{{ article.url }}" class="archive-link">{{ article.title }}</a>
+            </span>
+
+            <span class="hidden-summary"> {{article.summary}} </span>
+
+
+        </div>
+        {% endfor %}
+    </div>
     {% endfor %}
-    </tbody>
-</table>
+</div>
 
 
 {% endblock %}

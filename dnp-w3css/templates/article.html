@@ -1,22 +1,48 @@
 {% extends "base.html" %}
-{% block description %}Title: {{ article.title }}; Date: {{ article.date|strftime('%Y-%m-%d') }}; Author: {{ article.author }}{% endblock %}
+{% block description %}Title: {{ article.title }}; Date: {{ article.date|strftime('%Y-%m-%d') }}; Author: {{
+article.author }}{% endblock %}
 {% block title %}{{ article.title }} — {{ SITENAME }}{% endblock %}
 {% block content %}
 <div class="article" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="text-center article-header">
-		<h1 itemprop="name headline" class="article-title">{{ article.title }}</h1>
-		<span>
-			<time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.date|strftime('%B %d, %Y %I:%M %p %Z') }}</time>
-		&nbsp;—&nbsp;{{article.author}}
+
+	<h2 class="dnp-article-title" itemprop="name headline">{{ article.title }}</h2>
+
+	<time class="dnp-index-date" datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{
+		article.date|strftime('%B %d, %Y %I:%M %p %Z') }}</time>
+
+	&nbsp;—&nbsp;
+
+	<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+		<span itemprop="name">{{ article.author }}
 		</span>
-		{% if article.share_post and article.status != 'draft' %}
-		<section>
-			<p id="post-share-links">
-				Share on:
-				<!-- <a href="{{article.share_post['diaspora']}}" title="Share on Diaspora">Diaspora*</a> -->
-				<!-- ❄ -->
-				<a href="{{article.share_post['twitter']}}" title="Share on Twitter">Twitter</a>
-				<!-- ❄
+	</span>
+
+	{% if article.category %}
+	<span>
+		|
+		<span itemprop="articleSection">
+			<a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a>
+		</span>
+	</span>
+	{% endif %}
+	{% if article.tags %}
+	<span>
+		|
+		{% for tag in article.tags %}
+		<span itemprop="keywords">
+			<a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
+		</span>
+		{% endfor %}
+	</span>
+	{% endif %}
+	{% if article.share_post and article.status != 'draft' %}
+	<section>
+		<p id="post-share-links">
+			Share on:
+			<!-- <a href="{{article.share_post['diaspora']}}" title="Share on Diaspora">Diaspora*</a> -->
+			<!-- ❄ -->
+			<a href="{{article.share_post['twitter']}}" title="Share on Twitter">Twitter</a>
+			<!-- ❄
 				<a href="{{article.share_post['facebook']}}" title="Share on Facebook">Facebook</a>
 				❄
 				<a href="{{article.share_post['linkedin']}}" title="Share on LinkedIn">LinkedIn</a>
@@ -26,36 +52,19 @@
 				<a href="{{article.share_post['email']}}" title="Share via Email">Email</a>
 				❄
 				<a href="{{article.share_post['reddit']}}" title="Share via Reddit">Reddit</a> -->
-			</p>
-		</section>
-		{% endif %}
-		</div>
-		<!-- <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+		</p>
+	</section>
+	{% endif %}
+
+	<!-- <span itemprop="author" itemscope itemtype="http://schema.org/Person">
 			<h4 itemprop="name">{{article.author or "Wilson Freitas"}}</h4>
 		</span> -->
-		
+
 	<div itemprop="articleBody" class="article-body">{{ article.content }}</div>
 	<hr>
-	{% if article.category %}
-	<div>
-		Category:
-		<span itemprop="articleSection">
-			<a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a>
-		</span>
-	</div>
-	{% endif %}
-	{% if article.tags %} 
-	<div>
-		Tags:
-		{% for tag in article.tags %}
-		<span itemprop="keywords">
-			<a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
-		</span>
-		{% endfor %}
-	</div>
-	{% endif %}
-	
+
+
 	{% include "twitter.html" %}
 	{% include 'disqus.html' %}
 </div>
-{% endblock %} 
+{% endblock %}

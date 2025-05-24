@@ -36,8 +36,8 @@ for bookmarks in results:
         with open(path_to_file, 'w') as f:
             f.write('Title: '+bookmarks.description+'\n')
             f.write('Date: '+str(bookmarks.time)+'\n')
-            f.write('Author: Link\n')
-            f.write('Category: Link\n')
+            f.write('Author: Doug\n')
+            f.write('Category: Web\n')
             f.write('Tags: ')
             for tag in bookmarks.tags:
                 f.write(tag+', ')

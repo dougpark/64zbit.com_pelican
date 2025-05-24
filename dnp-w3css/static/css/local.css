@@ -19,6 +19,7 @@
   /* body text font */
   color: #3cb0ef;
   /* blue highlight */
+  --dnp-red-highlight: #d32f2f;
 }
 
 :root {
@@ -27,7 +28,7 @@
   --dnp-off-white-logo-font: #a1a1a1;
   --dnp-off-black-logo-font: #15171a;
   --dnp-grey-highlight: #464744;
-  --dnp-red-highlight: #b00602;
+  --dnp-red-highlight: #d32f2f;
   --dnp-light-background: #ffffff;
   --dnp-off-black-font: #15171a;
   --dnp-body-text-font: #728a94;
@@ -36,7 +37,17 @@
   --dnp-light-background: #e3eef3;
   --dnp-code-text: #576ca8;
   --dnp-code-background: #e6e8e9;
+  --dnp-highlight: #0288d1;
   --dnp: #5bbad5;
+}
+
+body a {
+  color: var(--dnp-red-highlight);
+}
+
+body a:hover {
+  color: var(--dnp-red-highlight);
+  text-decoration: underline;
 }
 
 /* Used for code highlighting */
@@ -75,6 +86,18 @@ p {
   font-size: 1em;
 }
 
+.dnp-site-title {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.dnp-site-title a:hover {
+  color: var(--dnp-highlight);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .dnp-logo-no-line {
   text-decoration: none;
 }
@@ -86,21 +109,35 @@ p {
 .dnp-logo-1 {
   font-family: "Kelly Slab", cursive;
   color: var(--dnp-off-black-logo-font);
-  font-size: calc(120% + 1vw);
+  font-size: calc(300% + 1vw);
   /* font-size: 4em; */
 }
 
 .dnp-logo-2 {
   font-family: "Kelly Slab", cursive;
   color: var(--dnp-red-highlight);
-  font-size: calc(120% + 1vw);
+  font-size: calc(300% + 1vw);
+  /* font-size: 4em; */
+}
+
+.dnp-logo-1f {
+  font-family: "Kelly Slab", cursive;
+  color: var(--dnp-off-black-logo-font);
+  font-size: calc(150% + 1vw);
+  /* font-size: 4em; */
+}
+
+.dnp-logo-2f {
+  font-family: "Kelly Slab", cursive;
+  color: var(--dnp-red-highlight);
+  font-size: calc(150% + 1vw);
   /* font-size: 4em; */
 }
 
 @media (min-width: 576px) {
   .dnp-logo-1,
   .dnp-logo-2 {
-    font-size: calc(120% + 1vw);
+    font-size: calc(300% + 1vw);
   }
   /*1rem = 16px*/
 }
@@ -143,7 +180,7 @@ p {
 }
 
 .dnp-nav-menu:hover {
-  color: var(--dnp-red-highlight);
+  color: var(--dnp-highlight);
   /* color: #ffffff; */
   /* background-color: var(--dnp-off-white-font); */
   text-decoration: none;
@@ -181,7 +218,7 @@ p {
   margin-left: 0%;
   color: var(--dnp-off-black-font);
   /* off black font */
-  font-size: calc(50% + 1vw);
+  font-size: calc(100% + 1vw);
 }
 
 .dnp-text-red {
@@ -208,7 +245,7 @@ blockquote {
   /* font-family: Georgia, serif; */
   font-size: 16px;
   line-height: 1.2;
-  color: #666;
+  color: #000000;
   text-align: justify;
   /*Borders - (Optional)*/
   /* border-left: 15px solid var(--dnp-red-highlight);
@@ -224,9 +261,9 @@ blockquote::before {
   /*Unicode for Left Double Quote*/
   /*Font*/
   font-family: Georgia, serif;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: bold;
-  color: #999;
+  color: #000000;
   /*Positioning*/
   position: absolute;
   left: 10px;
@@ -296,6 +333,7 @@ Resources .my-list-style {
 
 .article-title {
   margin-bottom: 1em;
+  font-weight: 500; /* lighter but still strong */
 }
 
 .article-header {
@@ -372,9 +410,147 @@ div.collapseheader {
   border: none;
   height: 1px; /* Thickness */
 
-  background-color: var(
-    --dnp-red-highlight
-  ); /* Replace with your color scheme */
+  background-color: var(--dnp-red-highlight);
   /* margin: 2rem 0; Space above and below */
   border-radius: 2px; /* Optional: softens the edges */
+}
+
+.dnp-archives {
+  font-size: 1.5em;
+}
+
+.archive-group {
+  padding-left: 1rem; /* Indent all articles under a year */
+}
+
+.archive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.archive-item {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.archive-date {
+  flex: 0 0 20%; /* Fixed width or use 25% */
+  color: #666;
+  font-size: 1.3em;
+}
+
+.archive-link {
+  /* flex: 1; */
+  text-decoration: none;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.archive-link:hover {
+  text-decoration: underline;
+}
+
+.dnp-index-title {
+  display: block; /* or 'block' if appropriate */
+  font-weight: 100; /* lighter but still strong */
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  /* transition: color 0.3s, border-color 0.3s; */
+}
+
+.dnp-index-title:hover {
+  color: var(--dnp-red-highlight);
+  /* background-color: var(--dnp-highlight); */
+  text-decoration: underline;
+  /*border-bottom: 2px solid var(--dnp-highlight) !important;*/ /* red underline */
+}
+
+.dnp-index-date {
+  font-weight: 100; /* lighter but still strong */
+  color: var(--dnp-off-black-font);
+}
+
+.dnp-index-tag {
+  font-weight: 100; /* lighter but still strong */
+  color: var(--dnp-red-highlight);
+}
+
+.dnp-archive-year {
+  font-weight: 100; /* lighter but still strong */
+  color: var(--dnp-red-highlight);
+}
+
+.dnp-article-title {
+  display: block; /* or 'block' if appropriate */
+  font-weight: 100; /* lighter but still strong */
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.dnp-article-title:hover {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid transparent !important; /* red underline */
+}
+
+.hidden-summary {
+  display: none; /* Hides it from view, but it’s still in the DOM and searchable */
+}
+/* Hide the <br> tag when summaries are shown */
+.show-summaries .conditional-break {
+  display: none;
+}
+
+/* Show the <br> tag when summaries are hidden */
+.conditional-break {
+  display: inline;
+}
+
+.dnp-search {
+  font-weight: 100; /* lighter but still strong */
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  color: var(--dnp-off-black-font);
+}
+
+.dnp-summaries {
+  font-weight: 100; /* lighter but still strong */
+  font-size: 1rem;
+  margin-left: 0rem;
+  color: var(--dnp-off-black-font);
+  margin-bottom: 1rem;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+button i {
+  pointer-events: none; /* Allows button click to go through icon */
+}
+
+@media (max-width: 576px) {
+  .dnp-search input {
+    font-size: 0.95rem;
+  }
+
+  .dnp-search button {
+    font-size: 0.9rem;
+  }
+
+  .dnp-search .form-label {
+    font-size: 1rem;
+  }
 }

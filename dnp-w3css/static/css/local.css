@@ -473,12 +473,12 @@ div.collapseheader {
 
 .dnp-index-date {
   font-weight: 100; /* lighter but still strong */
-  color: var(--dnp-off-black-font);
+  color: var(--dnp-red-highlight);
 }
 
 .dnp-index-tag {
   font-weight: 100; /* lighter but still strong */
-  color: var(--dnp-red-highlight);
+  color: var(--dnp-black-font);
 }
 
 .dnp-archive-year {
@@ -553,4 +553,29 @@ button i {
   .dnp-search .form-label {
     font-size: 1rem;
   }
+}
+
+.article-body a {
+  position: relative;
+  padding-right: 1.2em;
+  text-decoration: none;
+  /* color: #0077cc; */
+}
+
+.article-body a::after {
+  content: "\f35d"; /* Font Awesome Unicode for arrow-up-right-from-square */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900; /* Use 400 for regular weight icons */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75em;
+  opacity: 0;
+  transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.article-body a:hover::after {
+  opacity: 1;
+  right: -0.2em;
 }

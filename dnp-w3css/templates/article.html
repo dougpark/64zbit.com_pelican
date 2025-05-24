@@ -10,27 +10,27 @@ article.author }}{% endblock %}
 	<time class="dnp-index-date" datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{
 		article.date|strftime('%B %d, %Y %I:%M %p %Z') }}</time>
 
-	&nbsp;—&nbsp;
+
 
 	<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-		<span itemprop="name">{{ article.author }}
+		| <span itemprop="name">{{ article.author }}
 		</span>
 	</span>
 
 	{% if article.category %}
-	<span>
+	<!-- <span>
 		|
 		<span itemprop="articleSection">
 			<a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a>
 		</span>
-	</span>
+	</span> -->
 	{% endif %}
 	{% if article.tags %}
 	<span>
-		|
+
 		{% for tag in article.tags %}
-		<span itemprop="keywords">
-			<a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
+		<span class="dnp-index-tag" itemprop="keywords">
+			| <a class="dnp-index-tag" href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
 		</span>
 		{% endfor %}
 	</span>

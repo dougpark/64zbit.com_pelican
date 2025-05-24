@@ -12,21 +12,21 @@
     <!-- article.locale_date -->
     <time class="dnp-index-date" datetime="{{ article.date.isoformat() }}" itemprop="datePublished"> {{
         article.date|strftime('%B %d, %Y %I:%M %p %Z') }}</time>
-    &nbsp;—&nbsp;
-    <span class="dnp-index-date" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span itemprop="name">{{ article.author }}
+
+    <span class="dnp-index-tag" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        | <span itemprop="name">{{ article.author }}
         </span>
     </span>
-    |
+    <!-- |
     <span class="dnp-index-date" itemprop="articleSection">
         <a class="dnp-index-date" href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category
             }}</a>
-    </span>
-    |
+    </span> -->
+
     <span>
         {% for tag in article.tags %}
-        <span class="dnp-index-date" itemprop="keywords">
-            <a class="dnp-index-date" href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
+        <span class="dnp-index-tag" itemprop="keywords">
+            | <a class="dnp-index-tag" href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
         </span>
         {% endfor %}
     </span>

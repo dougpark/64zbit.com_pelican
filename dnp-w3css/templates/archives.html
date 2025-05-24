@@ -77,11 +77,11 @@
             <div>
                 <span class="dnp-index-date">{{ article.date.strftime("%d %b") }}</span>
 
-                <span class="dnp-index-tag" itemprop="articleSection">
+                <!-- <span class="dnp-index-tag" itemprop="articleSection">
                     | <a class="dnp-index-tag" href="{{ SITEURL }}/{{ article.category.url }}" rel="category"> {{
                         article.category
                         }}</a>
-                </span>
+                </span> -->
 
                 <span>
                     {% for tag in article.tags %}

@@ -9,6 +9,8 @@ SITEURL = 'http://localhost:8000'
 RELATIVE_URLS = False
 SITEYEAR = CURRENTYEAR  
 
+STATIC_PATHS = ['Projects']
+
 # LOAD_CONTENT_CACHE = False
 
 PATH = 'content'

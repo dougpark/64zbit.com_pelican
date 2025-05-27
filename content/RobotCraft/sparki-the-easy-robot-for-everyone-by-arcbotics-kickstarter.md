@@ -11,7 +11,7 @@ Status: published
 
 ![Voila Capture18](http://robotcraft.org/wp-content/uploads/2013/05/Voila_Capture18.png "Voila_Capture18.png"){width="600" height="393" border="0"}
 
-# New: Drag-and-Drop Block Programming! {#new-drag-and-drop-block-programming style="margin: 0px 0px 20px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; font-size: 1.5em; line-height: 1.042; color: #121a0d; font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;"}
+# New: Drag-and-Drop
 
 We're partnering with MiniBloq to bring Drag-and-Drop programming to Sparki! Easy robot programming, bringing the age range down to elementary, and opens robotics to whole new group of future roboticists.
 

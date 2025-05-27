@@ -17,8 +17,6 @@ Gertjan Kleinpaste, the principal of a participating school in Rotterdam, unders
 
 [Eleven iPad-centric schools to open in the Netherlands](http://www.tuaw.com/2013/07/02/eleven-ipad-centric-schools-to-open-in-the-netherlands/) originally appeared on [TUAW - The Unofficial Apple Weblog](http://www.tuaw.com) on Tue, 02 Jul 2013 14:00:00 EST. Please see our [terms for use of feeds](http://www.weblogsinc.com/feed-terms/).
 
-######   {#section style="clear: both; padding: 0; height: 2px; font-size: 1px; border: 0; margin: 0;"}
-
 [Source](http://www.spiegel.de/international/europe/new-ipad-schools-in-holland-hope-to-revolutionize-education-a-907936.html) \| [Permalink](http://www.tuaw.com/2013/07/02/eleven-ipad-centric-schools-to-open-in-the-netherlands/ "Permanent link to this entry"){rel="bookmark"} \| [Email this](http://www.tuaw.com/forward/20645034/ "Send this entry to a friend via email") \| [Comments](http://www.tuaw.com/2013/07/02/eleven-ipad-centric-schools-to-open-in-the-netherlands/#comments "View reader comments on this entry")
 
 More info at: [Eleven iPad-centric schools to open in the Netherlands](http://www.tuaw.com/2013/07/02/eleven-ipad-centric-schools-to-open-in-the-netherlands/#comments)

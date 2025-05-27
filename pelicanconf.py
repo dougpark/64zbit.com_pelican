@@ -9,7 +9,16 @@ SITEURL = 'http://localhost:8000'
 RELATIVE_URLS = False
 SITEYEAR = CURRENTYEAR  
 
-STATIC_PATHS = ['Projects']
+STATIC_PATHS = ['projects']
+ARTICLE_EXCLUDES = ['projects']
+PAGE_EXCLUDES = ['projects']
+
+JINJA_FILTERS = {}
+
+MARKDOWN = {
+    'extensions': ['extra', 'codehilite', 'meta'],
+    'output_format': 'html5',
+}
 
 # LOAD_CONTENT_CACHE = False
 
@@ -26,7 +35,7 @@ DEFAULT_LANG = 'en'
 
 PLUGIN_PATHS = ['./plugins']
 # https://github.com/andrewheiss/pelican_json_feed
-PLUGINS = ['pelican_json_feed']
+PLUGINS = ['pelican_json_feed', 'jinja2content']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_JSON = None

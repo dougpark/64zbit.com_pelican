@@ -6,9 +6,7 @@ Status: published
 
 Hi, I’m Doug Park — a lifelong technologist, problem-solver, and mentor. While I’m now retired, my curiosity and love for learning remain as active as ever.
 
-Over the course of a 30+ year career in the technology field, I had the opportunity to work across a wide range of industries — from aerospace and manufacturing to healthcare, insurance, and finance. I earned a B.S. in Computer Science with a minor in Psychology from McMurry University, and that unique combination served me well. While computer science launched my career, it was often my understanding of people that made the real difference — especially in translating between technical and business teams.
-
-I began at General Dynamics as a Manufacturing Technology Engineer, where I explored early applications of knowledge-based systems in factory settings. Later, at Lockheed Martin Aeronautics, I led enterprise-level software architecture projects supporting engineering and logistics efforts for programs like the Joint Strike Fighter. In 2000, I was honored to lead the Engineering Team of the Month for demonstrating advanced prognostics and health management technologies.
+Over the course of a 30+ year career in the technology field, I had the opportunity to work across a wide range of industries — from aerospace and manufacturing to healthcare, insurance, and finance. I earned a B.S. in Computer Science with a minor in Psychology from McMurry University, and that unique combination served me well. While computer science launched my career, it was often my study of psychology that made the real difference — especially in translating between technical and business teams.
 
 Over the years, I became known as the “translator” or “firefighter” — someone who could bring clarity and direction to complicated or cross-disciplinary projects. I’ve always been drawn to the challenge of aligning systems and people, and I valued mentoring others just as much as solving technical problems.
 

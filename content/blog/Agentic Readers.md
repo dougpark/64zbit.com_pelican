@@ -7,37 +7,37 @@ Summary: An interview with ChatGPT. Do you see this changing in the near future 
 
 ### Interview: The Future of Read-It-Later Tools in the Age of Agentic AI
 
-**Interviewer:** With Mozilla announcing the shutdown of Pocket, many users are left wondering where to turn. Are there any competitors stepping in to fill the gap?
+**Q:** With Mozilla announcing the shutdown of Pocket, many users are left wondering where to turn. Are there any competitors stepping in to fill the gap?
 
-**ChatGPT:** Yes, absolutely. A number of tools are emerging or growing in popularity as Pocket winds down. Notable alternatives include Instapaper, Raindrop.io, Omnivore, Matter, and Readwise Reader. Each of these services offers slightly different takes on the "read-it-later" model—some focusing on minimalism, others on tagging, highlighting, or integration with reading workflows.
+**A:** Yes, absolutely. A number of tools are emerging or growing in popularity as Pocket winds down. Notable alternatives include Instapaper, Raindrop.io, Omnivore, Matter, and Readwise Reader. Each of these services offers slightly different takes on the "read-it-later" model—some focusing on minimalism, others on tagging, highlighting, or integration with reading workflows.
 
-**Interviewer:** Does Pinboard still play a role in this ecosystem?
+**Q:** Does Pinboard still play a role in this ecosystem?
 
-**ChatGPT:** Pinboard is more of an archival bookmarking service than a full-fledged reader, but it certainly still serves a dedicated audience. It's known for its simplicity, speed, and long-term data retention, but lacks a modern interface and advanced parsing features. You won’t get the same kind of clean reading experience that Pocket or Instapaper users expect.
+**A:** Pinboard is more of an archival bookmarking service than a full-fledged reader, but it certainly still serves a dedicated audience. It's known for its simplicity, speed, and long-term data retention, but lacks a modern interface and advanced parsing features. You won’t get the same kind of clean reading experience that Pocket or Instapaper users expect.
 
-**Interviewer:** Are there any services that combine features like saving bookmarks, full-article parsing, and providing an RSS feed of saved content?
+**Q:** Are there any services that combine features like saving bookmarks, full-article parsing, and providing an RSS feed of saved content?
 
-**ChatGPT:** Yes. Omnivore, Raindrop.io, and Readwise Reader stand out in this area. Many of them allow you to save content via browser extensions or email, and then expose that saved content via RSS so you can read it in clients like NetNewsWire. Readwise Reader goes a step further by integrating highlighting, annotation, and syncing to Readwise's spaced repetition system.
+**A:** Yes. Omnivore, Raindrop.io, and Readwise Reader stand out in this area. Many of them allow you to save content via browser extensions or email, and then expose that saved content via RSS so you can read it in clients like NetNewsWire. Readwise Reader goes a step further by integrating highlighting, annotation, and syncing to Readwise's spaced repetition system.
 
-**Interviewer:** How does the reading experience compare across services?
+**Q:** How does the reading experience compare across services?
 
-**ChatGPT:** Services like Readwise Reader, Instapaper, and Matter shine when it comes to readability. They don’t just bookmark a link; they scrape the content, extract the main article body, and present it in a clean, distraction-free format. NetNewsWire, as a traditional RSS reader, does a good job with full-text feeds, but doesn’t parse or clean articles itself.
+**A:** Services like Readwise Reader, Instapaper, and Matter shine when it comes to readability. They don’t just bookmark a link; they scrape the content, extract the main article body, and present it in a clean, distraction-free format. NetNewsWire, as a traditional RSS reader, does a good job with full-text feeds, but doesn’t parse or clean articles itself.
 
-**Interviewer:** So these platforms essentially bypass the ads and junk of most websites?
+**Q:** So these platforms essentially bypass the ads and junk of most websites?
 
-**ChatGPT:** Exactly. They pull just the main content and ignore ads, pop-ups, sidebars, and other clutter. This is a massive win for readers, though obviously not so great for publishers who rely on ad revenue or subscriptions.
+**A:** Exactly. They pull just the main content and ignore ads, pop-ups, sidebars, and other clutter. This is a massive win for readers, though obviously not so great for publishers who rely on ad revenue or subscriptions.
 
-**Interviewer:** Speaking of subscriptions, how do these tools work with paywalled sites like the New York Times?
+**Q:** Speaking of subscriptions, how do these tools work with paywalled sites like the New York Times?
 
-**ChatGPT:** It varies. Some services can fetch content behind soft paywalls, but hard paywalls—like those requiring logins—are tougher. Readwise Reader, for example, won’t access subscriber-only content unless it’s publicly available or lightly restricted. Some tools allow you to paste in article text manually if needed.
+**A:** It varies. Some services can fetch content behind soft paywalls, but hard paywalls—like those requiring logins—are tougher. Readwise Reader, for example, won’t access subscriber-only content unless it’s publicly available or lightly restricted. Some tools allow you to paste in article text manually if needed.
 
-**Interviewer:** Are any readers trying to log in on behalf of the user to fetch restricted content?
+**Q:** Are any readers trying to log in on behalf of the user to fetch restricted content?
 
-**ChatGPT:** Not widely, at least not yet. Logging in on behalf of a user and scraping subscription content introduces legal and ethical complexities. But we might see more sophisticated options in the future that offer secure credential management for premium content access.
+**A:** Not widely, at least not yet. Logging in on behalf of a user and scraping subscription content introduces legal and ethical complexities. But we might see more sophisticated options in the future that offer secure credential management for premium content access.
 
-**Interviewer:** Do you think this will change with the rise of agentic AI?
+**Q:** Do you think this will change with the rise of agentic AI?
 
-**ChatGPT:** Absolutely. The future points toward agentic AI systems that act on behalf of users—fetching, parsing, and even summarizing or annotating reading material proactively. Imagine a system that knows your interests, monitors your preferred sites or feeds, logs in when necessary, and delivers relevant, cleaned content to you daily. That's where we're heading, and it’s going to fundamentally reshape how we consume written information.
+**A:** Absolutely. The future points toward agentic AI systems that act on behalf of users—fetching, parsing, and even summarizing or annotating reading material proactively. Imagine a system that knows your interests, monitors your preferred sites or feeds, logs in when necessary, and delivers relevant, cleaned content to you daily. That's where we're heading, and it’s going to fundamentally reshape how we consume written information.
 
 ---
 

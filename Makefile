@@ -1,5 +1,7 @@
-PY?=python3
-PELICAN?=/opt/homebrew/bin/pelican
+# PY?=python3
+# PELICAN?=/opt/homebrew/bin/pelican
+PY?=$(CURDIR)/.venv/bin/python3
+PELICAN?=$(CURDIR)/.venv/bin/pelican
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
@@ -63,7 +65,7 @@ help:
 	@echo '                                                                          '
 
 pinboard:
-	python3.9 getPinboard.py
+	"$(PY)" getPinboard.py
 
 publish: pinboard
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)

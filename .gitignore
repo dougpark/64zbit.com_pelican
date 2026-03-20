@@ -2,3 +2,7 @@
 /output
 __pycache__
 .token
+.venv
+venv
+env
+.vscode

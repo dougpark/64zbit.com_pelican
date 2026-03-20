@@ -1,6 +1,7 @@
 pelican==4.7.1
 markdown
-jinja2
 typogrify
 pelican-share-post==1.0.0
 pinboard==2.1.8
+markupsafe==2.0.1 
+jinja2==3.0.3

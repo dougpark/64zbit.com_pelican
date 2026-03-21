@@ -29,6 +29,22 @@ jobs:
         env:
           PINBOARD_TOKEN: ${{ secrets.PINBOARD_TOKEN }} # This maps the Secret to an Env Var
 
+      - name: Commit and Push new Pinboard posts
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add all new files (assuming they are in your content folder)
+          git add content/
+          
+          # Only commit if there are actually changes to avoid errors
+          if git diff --cached --quiet; then
+            echo "No new bookmarks found. Skipping commit."
+          else
+            git commit -m "Automated update from Pinboard $(date)"
+            git push origin main
+          fi
+
       - name: Deploy to Linode
         uses: easingthemes/ssh-deploy@main
         env:

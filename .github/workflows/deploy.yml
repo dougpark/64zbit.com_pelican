@@ -51,6 +51,18 @@ jobs:
             git push origin master
           fi
 
+      - name: Deploy to Output Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          # This matches the name you gave the secret in Step 2
+          API_TOKEN_GITHUB: ${{ secrets.PELICAN_TO_CLOUDFLARE_BLOG }}
+        with:
+          source-directory: 'output'
+          destination-github-username: 'dougpark'
+          destination-repository-name: 'blog-cloudflare'
+          user-email: 'parkdn@gmail.com'
+          target-branch: main
+
       - name: Deploy to Linode
         uses: easingthemes/ssh-deploy@main
         env:

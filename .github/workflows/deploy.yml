@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - master  # or 'master'
+  schedule:
+    # This runs at 6:00 AM Central Time (11:00 UTC) every day
+    - cron: '0 11 * * *'
+  workflow_dispatch: # Keeps the manual "Play" button active
+  repository_dispatch:
+    types: [manual_deploy]
 
 jobs:
   build:

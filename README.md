@@ -6,6 +6,8 @@
 * Decided Obsidian was overkill for my needs and switch to a more familiar editor
 * October 2022 - added method to download and format bookmarks from Pinboard.io
 
+* March 2026 - added github actions to auto build in the cloud and update the static site
+
 ## Python Core System
 - Python 3.9.5
 - Jinja2

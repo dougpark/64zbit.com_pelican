@@ -2,7 +2,7 @@ Title: About
 Date: 2025-01-01 13:40
 Status: published
 
-# About Me and Cats
+# About Me
 
 Hi, I’m Doug Park — a lifelong technologist, problem-solver, and mentor. While I’m now retired, my curiosity and love for learning remain as active as ever.
 

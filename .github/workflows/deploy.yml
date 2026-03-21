@@ -42,7 +42,7 @@ jobs:
             echo "No new bookmarks found. Skipping commit."
           else
             git commit -m "Automated update from Pinboard $(date)"
-            git push origin main
+            git push origin master
           fi
 
       - name: Deploy to Linode

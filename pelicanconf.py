@@ -9,7 +9,7 @@ SITEURL = 'http://localhost:8000'
 RELATIVE_URLS = False
 SITEYEAR = CURRENTYEAR  
 
-STATIC_PATHS = ['projects']
+STATIC_PATHS = ['images','projects']
 ARTICLE_EXCLUDES = ['projects']
 PAGE_EXCLUDES = ['projects']
 

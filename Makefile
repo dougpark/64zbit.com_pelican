@@ -1,7 +1,9 @@
 # PY?=python3
 # PELICAN?=/opt/homebrew/bin/pelican
-PY?=$(CURDIR)/.venv/bin/python3
-PELICAN?=$(CURDIR)/.venv/bin/pelican
+PY?=python3
+PELICAN?=pelican
+# PY?=$(CURDIR)/.venv/bin/python3
+# PELICAN?=$(CURDIR)/.venv/bin/pelican
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)

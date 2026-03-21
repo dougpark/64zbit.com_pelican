@@ -30,7 +30,7 @@ jobs:
           # Add any specific ones we fixed today just in case
           pip install markupsafe==2.0.1 jinja2==3.0.3 pelican-jinja2content
 
-      - name: Build site
+      - name: Build linode site
         run: make publish
         env:
           PINBOARD_TOKEN: ${{ secrets.PINBOARD_TOKEN }} # This maps the Secret to an Env Var
@@ -51,19 +51,6 @@ jobs:
             git push origin master
           fi
 
-      - name: Deploy to Output Repo
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          # This matches the name you gave the secret in Step 2
-          API_TOKEN_GITHUB: ${{ secrets.PELICAN_TO_CLOUDFLARE_BLOG }}
-        with:
-          source-directory: 'output'
-          destination-github-username: 'dougpark'
-          destination-repository-name: 'blog-cloudflare'
-          user-email: 'parkdn@gmail.com'
-          target-branch: main
-          
-
       - name: Deploy to Linode
         uses: easingthemes/ssh-deploy@main
         env:
@@ -73,3 +60,21 @@ jobs:
           REMOTE_HOST: "45.33.116.242"
           REMOTE_USER: "pi"
           TARGET: "/home/pi/prod_volumes/public_html/apache" # Where Apache looks
+
+      - name: Build blog.d11cloud site
+        run: make publishcloud
+        env:
+          PINBOARD_TOKEN: ${{ secrets.PINBOARD_TOKEN }} # This maps the Secret to an Env Var
+
+
+      - name: Deploy to Output Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          # This matches the name you gave the secret in Step 2
+          API_TOKEN_GITHUB: ${{ secrets.PELICAN_TO_CLOUDFLARE_BLOG }}
+        with:
+          source-directory: 'outputcloud'
+          destination-github-username: 'dougpark'
+          destination-repository-name: 'blog-cloudflare'
+          user-email: 'parkdn@gmail.com'
+          target-branch: main

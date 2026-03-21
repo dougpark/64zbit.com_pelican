@@ -9,8 +9,10 @@ PELICANOPTS=
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
+OUTPUTDIRCLOUD=$(BASEDIR)/outputcloud
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+PUBLISHCLOUD=$(BASEDIR)/publishcloud.py
 
 FTP_HOST=localhost
 FTP_USER=pi
@@ -71,6 +73,9 @@ pinboard:
 
 publish: pinboard
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
+
+publishcloud: pinboard
+	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIRCLOUD)" -s "$(PUBLISHCLOUD)" $(PELICANOPTS)
 
 build: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --include tags --cvs-exclude --delete "$(OUTPUTDIR)"/ "$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)"

@@ -3,9 +3,17 @@ import pinboard
 import os.path
 from urllib.parse import urlparse
 
-exec(open('config/.token').read())
+# New way: Get the token from the environment variable
+# If it's not there (like when running locally), it defaults to None
+token = os.environ.get('PINBOARD_TOKEN')
 
-pb = pinboard.Pinboard(pinboard_token)
+# Optional: If you still want it to work locally without env vars,
+# you can tell it to look for the file as a backup:
+if not token and os.path.exists('config/.token'):
+    with open('config/.token') as f:
+        token = f.read().strip()
+
+pb = pinboard.Pinboard(token)
 
 # most recent update
 print('Most recent update: ' + str(pb.posts.update()))

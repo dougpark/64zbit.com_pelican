@@ -26,6 +26,8 @@ jobs:
 
       - name: Build site
         run: make publish
+        env:
+          PINBOARD_TOKEN: ${{ secrets.PINBOARD_TOKEN }} # This maps the Secret to an Env Var
 
       - name: Deploy to Linode
         uses: easingthemes/ssh-deploy@main

@@ -9,10 +9,16 @@ PELICANOPTS=
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
-OUTPUTDIRCLOUD=$(BASEDIR)/outputcloud
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
-PUBLISHCLOUD=$(BASEDIR)/publishcloud.py
+
+
+# For blog.d11cloud.com
+OUTPUTDIR_CLOUD=$(BASEDIR)/outputcloud
+CONFFILE_CLOUD=$(BASEDIR)/pelicanconf_cloud.py
+PUBLISHCONF_CLOUD=$(BASEDIR)/publishconf_cloud.py
+
+
 
 FTP_HOST=localhost
 FTP_USER=pi
@@ -46,9 +52,15 @@ endif
 help:
 	@echo 'Makefile for a pelican Web site'
 	@echo ' make dev 		- build and run local webserver'
-	@echo ' make publish 	- build production local'
-	@echo ' make build 		- build production and publish to 64zbit.com' 
-	                           
+	@echo ' make publish 	- build production to folder output (64zbit.com)'
+	@echo ' make build 		- build production and publish rsync to 64zbit.com' 
+
+	@echo ' '
+	@echo ' make publishcloud 	- build production to folder outputcloud (blog.d11cloud.com)' 
+	@echo ' make devserver_cloud 	- build development to folder outputcloud and run local webserver (blog.d11cloud.com)'
+	
+
+
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
 	@echo '   make html                           (re)generate the web site          '
@@ -74,8 +86,6 @@ pinboard:
 publish: pinboard
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
-publishcloud: pinboard
-	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIRCLOUD)" -s "$(PUBLISHCLOUD)" $(PELICANOPTS)
 
 build: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --include tags --cvs-exclude --delete "$(OUTPUTDIR)"/ "$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)"
@@ -83,6 +93,13 @@ build: publish
 dev: pinboard
 	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
+# buid for blog.d11cloud.com
+publishcloud: pinboard
+	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR_CLOUD)" -s "$(PUBLISHCONF_CLOUD)" $(PELICANOPTS)
+
+# d11cloud.com local dev server, no pinboard update
+devserver_cloud:
+	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR_CLOUD)" -s "$(CONFFILE_CLOUD)" $(PELICANOPTS)
 
 
 

@@ -26,7 +26,7 @@ PATH = 'content'
 OUTPUT_PATH = 'output'
 
 # THEME = './dnp-aboutwilson'
-THEME = './dnp-w3css'
+THEME = './64zbit-w3css'
 #THEME = './pelican-svbhack-master'
 #THEME = './pelican-themes/pelican-themes/backdrop'
  

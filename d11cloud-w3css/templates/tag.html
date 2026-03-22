@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% block description %}All posts which refer to tag {{ tag }}{% endblock %}
+{% block title %}{{ tag }} — {{ SITENAME }}{% endblock %}
+{% block content %}
+
+
+
+<div class="dnp-search container-fluid mb-3">
+    <label for="searchBox" class="form-label">Search Tags</label>
+
+    <div class="position-relative" style="width: 100%;">
+        <input type="text" id="searchBox" class="form-control pe-5" placeholder="Search tags..." />
+        <span id="clearSearchIcon" class="position-absolute" style="
+        top: 50%;
+        right: 0.75rem;
+        transform: translateY(-50%);
+        font-size: 0.75rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+      ">
+            ×
+        </span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-2 flex-wrap gap-2">
+        <button class="btn btn-sm btn-outline-primary" id="toggleSummaryBtn" title="Toggle Summaries">
+            <span class="me-1">Show Summaries</span>
+            <i class="fa-solid fa-toggle-off"></i>
+        </button>
+    </div>
+</div>
+
+
+
+
+<script>
+    const searchBox = document.getElementById('searchBox');
+    const clearIcon = document.getElementById('clearSearchIcon');
+    const toggleSummaryBtn = document.getElementById('toggleSummaryBtn');
+    let summariesVisible = false;
+
+    function setSummaryVisibility(visible) {
+        summariesVisible = visible;
+
+        const summaries = document.querySelectorAll('.hidden-summary');
+        summaries.forEach(summary => {
+            summary.style.display = visible ? 'block' : 'none';
+        });
+
+        const toggleIcon = toggleSummaryBtn.querySelector('i');
+        toggleIcon.classList.toggle('fa-toggle-off', !visible);
+        toggleIcon.classList.toggle('fa-toggle-on', visible);
+    }
+
+    searchBox.addEventListener('input', function () {
+        const query = this.value.trim().toLowerCase();
+
+        // Show or hide the clear "×"
+        clearIcon.style.display = query ? 'inline-block' : 'none';
+
+        // Your search logic here (already implemented)
+        const items = document.querySelectorAll('.archive-item');
+        items.forEach(item => {
+            if (item.dataset.originalHtml) {
+                item.innerHTML = item.dataset.originalHtml;
+            } else {
+                item.dataset.originalHtml = item.innerHTML;
+            }
+
+            const textContent = item.textContent.toLowerCase();
+            const show = query === '' || textContent.includes(query);
+            item.style.display = show ? '' : 'none';
+
+            if (show && query) {
+                highlightText(item, query);
+            }
+        });
+
+        // Re-apply summary state if you're using it
+        setSummaryVisibility(summariesVisible);
+    });
+
+    clearIcon.addEventListener('click', function () {
+        searchBox.value = '';
+        clearIcon.style.display = 'none';
+        searchBox.dispatchEvent(new Event('input'));
+    });
+
+    function highlightText(element, keyword) {
+        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+
+        const textNodes = [];
+        while (walker.nextNode()) {
+            const node = walker.currentNode;
+            if (node.nodeValue.trim()) {
+                textNodes.push(node);
+            }
+        }
+
+        textNodes.forEach(node => {
+            const value = node.nodeValue;
+            const parent = node.parentNode;
+
+            // Skip script/style/code/pre tags
+            if (['SCRIPT', 'STYLE', 'CODE', 'PRE'].includes(parent.tagName)) return;
+
+            const regex = new RegExp(`(${keyword})`, 'gi');
+            if (regex.test(value)) {
+                const highlighted = value.replace(regex, '<mark>$1</mark>');
+                const span = document.createElement('span');
+                span.innerHTML = highlighted;
+                parent.replaceChild(span, node);
+            }
+        });
+    }
+
+
+
+    // Toggle summaries visibility
+    toggleSummaryBtn.addEventListener('click', function () {
+
+        setSummaryVisibility(!summariesVisible);
+
+        const summaries = document.querySelectorAll('.hidden-summary');
+
+        summaries.forEach(summary => {
+            summary.style.display = summariesVisible ? 'block' : 'none';
+        });
+
+        // Update the icon
+        const toggleIcon = toggleSummaryBtn.querySelector('i');
+        toggleIcon.classList.toggle('fa-toggle-off', !summariesVisible);
+        toggleIcon.classList.toggle('fa-toggle-on', summariesVisible);
+    });
+</script>
+
+
+<h1>Tag <small>{{tag}}</small></h1>
+<div>
+
+    {% for article in articles %}
+    <div class="archive-item" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <div>
+            <!-- <a class="dnp-index-title" href=" {{ SITEURL }}/{{ article.url }}">
+            <h2 itemprop="name headline">{{ article.title }}</h2>
+        </a> -->
+
+            <time class="dnp-index-date" datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{
+                article.date|strftime('%B %d, %Y') }}</time>
+
+            <!-- &nbsp;—&nbsp;
+                <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                    <span itemprop="name">{{article.author or "Wilson Freitas"}}</span>
+                </span> -->
+            {% if article.category %}
+            <!-- <div>
+                Category:
+                <span itemprop="articleSection">
+                    <a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a>
+                </span>
+            </div> -->
+            {% endif %}
+            {% if article.tags %}
+            <span>
+
+                {% for tag in article.tags %}
+                <span class="post-tags" itemprop="keywords">
+                    <a class="post-tags" href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
+                </span>
+                {% endfor %}
+            </span>
+        </div>
+        {% endif %}
+        <span>
+            <a href="{{ SITEURL }}/{{ article.url }}" class="archive-link">{{ article.title }}</a>
+        </span>
+
+        <span class="hidden-summary">{{ article.summary }}</span>
+
+
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

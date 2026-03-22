@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% block description %}The archives page, find old stuff organized by date.{% endblock %}
+{% block title %}Archive — {{ SITENAME }}{% endblock %}
+{% block content %}
+
+
+<div class="dnp-search container-fluid mb-3">
+    <label for="searchBox" class="form-label">Search Archives</label>
+
+    <div class="position-relative" style="width: 100%;">
+        <input type="text" id="searchBox" class="form-control pe-5" placeholder="Search archives..." />
+        <span id="clearSearchIcon" class="position-absolute" style="
+        top: 50%;
+        right: 0.75rem;
+        transform: translateY(-50%);
+        font-size: 0.75rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        text-align: center;
+        color: white;
+        background-color: black;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+      ">
+            ×
+        </span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-2 flex-wrap gap-2">
+        <button class="btn btn-sm btn-outline-primary" id="toggleSummaryBtn" title="Toggle Summaries">
+            <span class="me-1">Show Summaries</span>
+            <i class="fa-solid fa-toggle-off"></i>
+        </button>
+    </div>
+</div>
+
+
+
+
+<script>
+    const searchBox = document.getElementById('searchBox');
+    const clearIcon = document.getElementById('clearSearchIcon');
+    const toggleSummaryBtn = document.getElementById('toggleSummaryBtn');
+    let summariesVisible = false;
+
+    function setSummaryVisibility(visible) {
+        summariesVisible = visible;
+
+        const summaries = document.querySelectorAll('.hidden-summary');
+        summaries.forEach(summary => {
+            summary.style.display = visible ? 'block' : 'none';
+        });
+
+        const toggleIcon = toggleSummaryBtn.querySelector('i');
+        toggleIcon.classList.toggle('fa-toggle-off', !visible);
+        toggleIcon.classList.toggle('fa-toggle-on', visible);
+    }
+
+    searchBox.addEventListener('input', function () {
+        const query = this.value.trim().toLowerCase();
+        const items = document.querySelectorAll('.archive-item');
+
+        // Show or hide the clear "×"
+        clearIcon.style.display = query ? 'inline-block' : 'none';
+
+        items.forEach(item => {
+            // Restore original HTML from backup, if available
+            if (item.dataset.originalHtml) {
+                item.innerHTML = item.dataset.originalHtml;
+            } else {
+                item.dataset.originalHtml = item.innerHTML;
+            }
+
+            // Check if it should be shown
+            const textContent = item.textContent.toLowerCase();
+            const show = query === '' || textContent.includes(query);
+            item.style.display = show ? '' : 'none';
+
+            if (show && query) {
+                highlightText(item, query);
+            }
+        });
+        // Re-apply summary visibility after filtering/highlighting
+        setSummaryVisibility(summariesVisible);
+    });
+
+    clearIcon.addEventListener('click', function () {
+        searchBox.value = '';
+        clearIcon.style.display = 'none';
+        searchBox.dispatchEvent(new Event('input'));
+    });
+
+    function highlightText(element, keyword) {
+        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+
+        const textNodes = [];
+        while (walker.nextNode()) {
+            const node = walker.currentNode;
+            if (node.nodeValue.trim()) {
+                textNodes.push(node);
+            }
+        }
+
+        textNodes.forEach(node => {
+            const value = node.nodeValue;
+            const parent = node.parentNode;
+
+            // Skip script/style/code/pre tags
+            if (['SCRIPT', 'STYLE', 'CODE', 'PRE'].includes(parent.tagName)) return;
+
+            const regex = new RegExp(`(${keyword})`, 'gi');
+            if (regex.test(value)) {
+                const highlighted = value.replace(regex, '<mark>$1</mark>');
+                const span = document.createElement('span');
+                span.innerHTML = highlighted;
+                parent.replaceChild(span, node);
+            }
+        });
+    }
+
+
+
+    // Toggle summaries visibility
+    toggleSummaryBtn.addEventListener('click', function () {
+
+        setSummaryVisibility(!summariesVisible);
+
+        const summaries = document.querySelectorAll('.hidden-summary');
+
+        summaries.forEach(summary => {
+            summary.style.display = summariesVisible ? 'block' : 'none';
+        });
+
+        // Update the icon
+        const toggleIcon = toggleSummaryBtn.querySelector('i');
+        toggleIcon.classList.toggle('fa-toggle-off', !summariesVisible);
+        toggleIcon.classList.toggle('fa-toggle-on', summariesVisible);
+    });
+</script>
+
+
+<h1>Archive</h1>
+
+
+
+<div class="archive-list">
+
+    {% for year, articles_in_year in dates|sort(attribute='date', reverse=True)|groupby('date.year')|reverse %}
+    <h3 class="dnp-archive-year">{{ year }}</h3>
+    <div class="archive-group">
+        {% for article in articles_in_year %}
+        <div class="archive-item">
+            <div>
+                <span class="dnp-index-date">{{ article.date.strftime("%d %b") }}</span>
+
+                <!-- <span class="dnp-index-tag" itemprop="articleSection">
+                    | <a class="dnp-index-tag" href="{{ SITEURL }}/{{ article.category.url }}" rel="category"> {{
+                        article.category
+                        }}</a>
+                </span> -->
+
+                <span>
+                    {% for tag in article.tags %}
+                    <span class="post-tags" itemprop="keywords">
+                        <a class="post-tags" href="{{ SITEURL }}/{{ tag.url }}" rel="tag"> {{ tag }}</a>
+                    </span>
+                    {% endfor %}
+                </span>
+            </div>
+
+            <span>
+                <a href="{{ SITEURL }}/{{ article.url }}" class="archive-link">{{ article.title }}</a>
+            </span>
+
+            <span class="hidden-summary"> {{article.summary}} </span>
+
+
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

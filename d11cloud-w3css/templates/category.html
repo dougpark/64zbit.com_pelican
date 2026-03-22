@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block description %}All posts which refer to category {{ category }}{% endblock %}
+{% block title %}{{ category }} — {{ SITENAME }}{% endblock %}
+{% block content %}
+<h1>Category <small>{{category}}</small></h1>
+<table class="table">
+    <tbody>
+    {% for article in articles %}
+
+    <tr>
+        <td>
+            
+                <a href="{{ SITEURL }}/{{ article.url }}">
+                    <h2 itemprop="name headline">{{ article.title }}</h2>
+                </a>
+                
+            
+            <time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.date|strftime('%B %d, %Y %I:%M %p %Z') }}</time>
+            &nbsp;—&nbsp;
+            <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <span itemprop="name">{{article.author or "Wilson Freitas"}}</span>
+            </span>
+            
+            {% if article.category %}
+            <div>
+                Category:
+                <span itemprop="articleSection">
+                    <a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a>
+                </span>
+            </div>
+            {% endif %}
+            {% if article.tags %}
+            <div>
+                Tags:
+                {% for tag in article.tags %}
+                <span itemprop="keywords">
+                    <a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
+                </span>
+                {% endfor %}
+            </div>
+            {% endif %} 
+            <p class="mb-3"></p>
+            <span class="dnp-article-summary">{{ article.summary }}</span>
+
+        </td>
+    
+    </tr>
+
+        <!-- <tr>
+        <td>{{ article.date.strftime("%d %b %Y") }}</td>
+        <td><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></td>
+        </tr> -->
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -10,6 +10,11 @@ from pelicanconf import *
 SITEURL = 'https://blog.d11cloud.com'
 RELATIVE_URLS = False
 
+# override theme for publish
+THEME = './d11cloud-w3css'
+SITENAME = 'D11Cloud.com'
+SITESUBTITLE = 'Full Stack, Full Spectrum'
+
 OUTPUT_PATH = 'outputcloud'
 FEED_ALL_JSON = 'feeds/all.json'
 CATEGORY_FEED_JSON = 'feeds/%s.json'

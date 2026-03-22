@@ -2,6 +2,14 @@ Title: About
 Date: 2025-01-01 13:40
 Status: published
 
+# Contact Doug Park
+
+- Mastodon [@parkdn@mastodon.social](https://mastodon.social/@Parkdn)
+
+- Github [github.com/dougpark](https://github.com/dougpark)
+
+- Email [Doug@d11cloud.com](mailto:doug@d11cloud.com)
+
 # About Me
 
 Hi, I’m Doug Park — a lifelong technologist, problem-solver, and mentor. While I’m now retired, my curiosity and love for learning remain as active as ever.
@@ -16,6 +24,6 @@ Since then, I’ve poured my energy into helping the next generation learn, grow
 
 Today, I still enjoy exploring technology — just without the deadlines. I write, mentor, and occasionally tinker with home projects for the fun of learning. I also continue to support youth education and medical advocacy, which I consider some of the most important work of my life.
 
-Thanks for stopping by. I hope my blog offers you something useful — whether it’s a tech insight, a project idea, or a spark of inspiration.
+Thanks for stopping by. 
 
 — Doug

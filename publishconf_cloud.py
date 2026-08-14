@@ -13,7 +13,7 @@ RELATIVE_URLS = False
 # override theme for publish
 THEME = './d11cloud-w3css'
 SITENAME = 'D11Cloud.com'
-SITESUBTITLE = 'Full Stack, Full Spectrum'
+SITESUBTITLE = 'Tech is way, WAY interesting'
 
 OUTPUT_PATH = 'outputcloud'
 FEED_ALL_JSON = 'feeds/all.json'

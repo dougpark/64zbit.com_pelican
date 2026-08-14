@@ -3,7 +3,7 @@ from datetime import date
 CURRENTYEAR = date.today().year
 AUTHOR = 'Doug'
 SITENAME = 'D11Cloud.com'
-SITESUBTITLE = 'Full Stack, Full Spectrum'
+SITESUBTITLE = 'Tech is way, WAY interesting'
 
 SITEURL = 'http://localhost:8000'
 RELATIVE_URLS = False
